@@ -1,12 +1,15 @@
-import Image from "next/image";
+'use client';
+
+import { useTranslations } from "next-intl";
 import * as S from "./style";
 
 export default function Home() {
+  const t = useTranslations('Home')
   return (
     <S.Container >
       <S.LogoContent>
         <S.InfoContent>
-          <S.Title>Meu Portfólio</S.Title>
+          <S.Title>{t('title')}</S.Title>
         </S.InfoContent>
       </S.LogoContent>
     </S.Container>
