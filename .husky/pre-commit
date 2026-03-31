@@ -1,1 +1,5 @@
-npx lint-staged
+echo 'Checking for linting erros...'
+npm run lint || (
+    echo 'Linting failed. Please fix them before commiting\n'
+)
+echo '\nDone\n'
