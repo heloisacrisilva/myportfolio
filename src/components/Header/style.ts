@@ -8,37 +8,36 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   z-index: 99;
+  border-bottom: 1px solid ${({ theme }) => theme.commonColors.darkZinc};
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background: #f3dfe1;
+  background: ${({ theme }) => theme.secondaryBackground};
   gap: 1rem;
 `;
 
 export const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  flex: 1;
-
-  color: black;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  color: ${({ theme }) => theme.commonColors.pink};
+  font-weight: ${({ theme }) => theme.fonts.helveticaBold};
 `;
 
-export const LocaleButtons = styled.div`
+export const Sections = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1.5rem;
+  flex: 1;
+`;
 
-  span {
-    color: white;
-    opacity: 0.6;
-  }
+export const SectionsItem = styled.a<{ $active?: boolean }>`
+  color: ${({ theme, $active }) => ($active ? theme.commonColors.pink : theme.commonColors.lightZinc)};
+  font-weight: ${({ theme, $active }) => ($active ? theme.fonts.helveticaBold : theme.fonts.helveticaMedium)};
+
+  text-decoration: ${({ $active }) => ($active ? 'underline' : 'none')};
+  text-decoration-thickness: ${({ $active }) => ($active ? '2px' : '0')};
+  text-underline-offset: ${({ $active }) => ($active ? '6px' : '0')};
 `;
 
 export const LocaleBox = styled.div`
@@ -46,32 +45,4 @@ export const LocaleBox = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-
-  span {
-    color: white;
-  }
-`
-
-export const LocaleLink = styled.a<{ $active?: boolean }>`
-  color: ${({ $active }) => ($active ? '#d6346a' : '#ffff')};
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  ${({ $active }) =>
-    $active &&
-    `
-    transform: scale(1.1);
-    font-weight: bold;
-  `}
-
-  &:hover {
-    transform: scale(1.15);
-    opacity: 0.8;
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-`
+`;

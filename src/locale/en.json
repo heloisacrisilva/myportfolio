@@ -3,7 +3,11 @@
     "title": "Welcome"
   },
   "header": {
-    "owner": "Heloísa Cristovão da Silva",
+    "owner": "Heloísa Silva",
+    "about": "About",
+    "stack": "Stack",
+    "projects": "Projects",
+    "contact": "Contact",
     "PT": "PT",
     "EN": "EN"
   }

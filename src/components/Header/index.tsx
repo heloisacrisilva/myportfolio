@@ -1,30 +1,34 @@
 'use client';
 
-import { useLocale, useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 import * as S from './style';
+import { getCookie } from '@/utils/cookies.client';
+import { getTranslation } from '@/utils/i18n';
+import LanguageButton from '../Buttons/LanguageButton';
+import CONSTANTS from '@/config/constants.mjs';
+import ThemeSwitcher from '../Buttons/ThemeSwitcher';
+
+const { AVAILABLE_LOCALES } = CONSTANTS;
 
 export const Header = () => {
-  const t = useTranslations('Header');
-  const pathname = usePathname();
-  const locale = useLocale()
-
-  const switchLocale = (newLocale: string) => {
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    return segments.join('/');
-  };
+  const lang = getCookie('locale');
+  const t = getTranslation(lang, 'header');
 
   return (
     <S.Container>
       <S.Nav>
         <a>{t('owner')}</a>
       </S.Nav>
+      <S.Sections>
+        <S.SectionsItem $active={true} href='/about'>{t('about')}</S.SectionsItem>
+        <S.SectionsItem href='/stack'>{t('stack')}</S.SectionsItem>
+        <S.SectionsItem href='/projects'>{t('projects')}</S.SectionsItem>
+        <S.SectionsItem href='/contact'>{t('contact')}</S.SectionsItem>
+      </S.Sections>
       <S.LocaleBox>
-        <S.LocaleLink $active={locale === 'pt'} href={switchLocale('pt')}>{t('PT')}</S.LocaleLink>
-        <span>|</span>
-        <S.LocaleLink $active={locale === 'en'} href={switchLocale('en')}>{t('EN')}</S.LocaleLink>
+        {AVAILABLE_LOCALES.map((lang) => (
+          <LanguageButton key={lang} lang={lang} />
+        ))}
+        <ThemeSwitcher/>
       </S.LocaleBox>
     </S.Container>
   );

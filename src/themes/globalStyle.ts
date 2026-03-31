@@ -34,8 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: ${({ theme }) => theme.commonColors.second};;
-    background: ${({ theme }) => theme.primaryBackground};
+    color: ${({ theme }) => theme.secondaryColor};;
+    background: ${({ theme }) => theme.secondaryBackground};
     font-family: HelveticaMedium, sans-serif;
     position: relative;
   }

@@ -40,22 +40,13 @@ export interface iCommonTheme {
     primary: string;
     second: string;
 
-    error: string;
-    error25: string;
-    warning: string;
-    warning25: string;
-    alert: string;
-    alert25: string;
-    success: string;
-    success25: string;
-
     lightZinc: string;
     darkZinc: string;
     darkZinc25: string;
 
-    highlight: string;
-    neutralSurface: string;
-    neutralSurface25: string;
+    pink: string;
+    lightPink: string;
+    neutral: string;
 
     neutral25: string;
 
