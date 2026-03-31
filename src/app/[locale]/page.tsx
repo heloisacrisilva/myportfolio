@@ -1,11 +1,14 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import * as S from './style';
 import { Header } from '@/components/Header';
+import { getTranslation } from '@/utils/i18n';
+import { getCookie } from '@/utils/cookies.client';
 
-export default function Home() {
-  const t = useTranslations('Home');
+function Home() {
+  const lang = getCookie('locale');
+  const t = getTranslation(lang, 'home');
+
   return (
     <S.Container>
       <Header />
@@ -17,3 +20,5 @@ export default function Home() {
     </S.Container>
   );
 }
+
+export default Home;
