@@ -21,12 +21,12 @@ export default async function RootLayout({ children, params }: { children: React
   return (
     <html lang={locale}>
       <body>
-        <StyledComponentsRegistry>
+        <StyledComponentsRegistry key={locale}>
+          <GlobalStyle key={locale} />
           <NextIntlClientProvider locale={locale} messages={messages}>
             <main>
               {children}
             </main>
-            <GlobalStyle />
           </NextIntlClientProvider>
         </StyledComponentsRegistry>
       </body>
