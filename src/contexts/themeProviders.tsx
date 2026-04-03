@@ -18,9 +18,11 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProviderContext = ({ children }: ThemeProviderProps) => {
+  type ThemeName = keyof typeof themes;
+
   const [theme, setTheme] = useState<DefaultTheme>(() => {
     if (typeof window !== 'undefined') {
-      const storedTheme = localStorage.getItem('theme');
+      const storedTheme = localStorage.getItem('theme') as ThemeName | null;
       if (storedTheme && themes[storedTheme]) {
         return themes[storedTheme];
       }
@@ -30,7 +32,7 @@ export const ThemeProviderContext = ({ children }: ThemeProviderProps) => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
+      <StyledThemeProvider theme={theme ?? themes.darkTheme}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   );
 };
