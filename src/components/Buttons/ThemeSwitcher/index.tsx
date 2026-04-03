@@ -27,7 +27,7 @@ const ThemeSwitcher: React.FC = () => {
     }
   }, [setTheme]);
 
-  return <SwitchButton onChange={handleThemeToggle} value={theme === themes.darkTheme ? true : false} />;
+  return <SwitchButton onToggle={handleThemeToggle} value={theme === themes.darkTheme ? true : false} />;
 };
 
 export default ThemeSwitcher;

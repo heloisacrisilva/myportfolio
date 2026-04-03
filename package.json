@@ -10,6 +10,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "babel-plugin-styled-components": "^2.1.4",
     "next": "16.2.1",
     "next-intl": "^4.8.3",

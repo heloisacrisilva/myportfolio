@@ -19,16 +19,18 @@ export const Header = () => {
         <a>{t('owner')}</a>
       </S.Nav>
       <S.Sections>
-        <S.SectionsItem $active={true} href='/about'>{t('about')}</S.SectionsItem>
-        <S.SectionsItem href='/stack'>{t('stack')}</S.SectionsItem>
-        <S.SectionsItem href='/projects'>{t('projects')}</S.SectionsItem>
-        <S.SectionsItem href='/contact'>{t('contact')}</S.SectionsItem>
+        <S.SectionsItem $active={true} href="/about">
+          {t('about')}
+        </S.SectionsItem>
+        <S.SectionsItem href="/stack">{t('stack')}</S.SectionsItem>
+        <S.SectionsItem href="/projects">{t('projects')}</S.SectionsItem>
+        <S.SectionsItem href="/contact">{t('contact')}</S.SectionsItem>
       </S.Sections>
+      <ThemeSwitcher />
       <S.LocaleBox>
         {AVAILABLE_LOCALES.map((lang) => (
           <LanguageButton key={lang} lang={lang} />
         ))}
-        <ThemeSwitcher/>
       </S.LocaleBox>
     </S.Container>
   );
