@@ -1,7 +1,6 @@
 'use client';
 
 import * as S from './style';
-import { getCookie } from '@/utils/cookies.client';
 import { getTranslation } from '@/utils/i18n';
 import LanguageButton from '../Buttons/LanguageButton';
 import CONSTANTS from '@/config/constants.mjs';
@@ -9,8 +8,11 @@ import ThemeSwitcher from '../Buttons/ThemeSwitcher';
 
 const { AVAILABLE_LOCALES } = CONSTANTS;
 
-export const Header = () => {
-  const lang = getCookie('locale');
+interface HeaderProps {
+  lang: string;
+}
+
+export const Header = ({ lang }: HeaderProps) => {
   const t = getTranslation(lang, 'header');
 
   return (
@@ -18,18 +20,30 @@ export const Header = () => {
       <S.Nav>
         <a>{t('owner')}</a>
       </S.Nav>
+
       <S.Sections>
-        <S.SectionsItem $active={true} href="/about">
+        <S.SectionsItem $active href={`/${lang}/about`}>
           {t('about')}
         </S.SectionsItem>
-        <S.SectionsItem href="/stack">{t('stack')}</S.SectionsItem>
-        <S.SectionsItem href="/projects">{t('projects')}</S.SectionsItem>
-        <S.SectionsItem href="/contact">{t('contact')}</S.SectionsItem>
+
+        <S.SectionsItem href={`/${lang}/stack`}>
+          {t('stack')}
+        </S.SectionsItem>
+
+        <S.SectionsItem href={`/${lang}/projects`}>
+          {t('projects')}
+        </S.SectionsItem>
+
+        <S.SectionsItem href={`/${lang}/contact`}>
+          {t('contact')}
+        </S.SectionsItem>
       </S.Sections>
+
       <ThemeSwitcher />
+
       <S.LocaleBox>
-        {AVAILABLE_LOCALES.map((lang) => (
-          <LanguageButton key={lang} lang={lang} />
+        {AVAILABLE_LOCALES.map((locale) => (
+          <LanguageButton  key={locale} lang={locale} currentLang={lang} />
         ))}
       </S.LocaleBox>
     </S.Container>

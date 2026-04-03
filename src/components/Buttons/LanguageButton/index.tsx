@@ -7,20 +7,22 @@ import { getCookie, setCookie } from '@/utils/cookies.client';
 
 const { DEFAULT_LOCALE_DISPLAY } = CONSTANTS;
 
-interface iLanguage {
+interface LanguageButtonProps {
   lang: string;
+  currentLang: string;
 }
 
-const LanguageButton = ({ lang }: iLanguage) => {
+const LanguageButton = ({ lang, currentLang }: LanguageButtonProps) => {
   const router = useRouter();
-  const locale = getCookie('locale');
 
-  const isDefault = lang === DEFAULT_LOCALE_DISPLAY && !locale;
-  const isSelected = (locale && lang.split('-')[0] === locale) || isDefault;
+  const isDefault = lang === DEFAULT_LOCALE_DISPLAY && !currentLang;
+  const isSelected = (currentLang && lang.split('-')[0] === currentLang) || isDefault;
 
   function handleLangChange() {
-    setCookie('locale', lang.split('-')[0]);
-    router.refresh();
+    const newLocale = lang.split('-')[0];
+
+    setCookie('locale', newLocale);
+    router.push(`/${newLocale}`);
   }
 
   return (

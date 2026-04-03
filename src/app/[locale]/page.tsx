@@ -1,13 +1,16 @@
-'use client';
-
 import * as S from './style';
 import { Header } from '@/components/Header';
 
-function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: lang } = await params;
 
   return (
     <S.Container>
-      <Header />
+      <Header lang={lang} />
       <S.LogoContent>
         <S.InfoContent>
           <S.Title></S.Title>
@@ -16,5 +19,3 @@ function Home() {
     </S.Container>
   );
 }
-
-export default Home;
