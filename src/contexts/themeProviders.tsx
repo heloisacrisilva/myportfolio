@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 
 import { DefaultTheme, ThemeProvider as StyledThemeProvider } from 'styled-components';
 

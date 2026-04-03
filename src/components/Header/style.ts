@@ -8,7 +8,7 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   z-index: 99;
-  border-bottom: 1px solid ${({ theme }) => theme.commonColors.darkZinc};
+  border-bottom: 1px solid ${({ theme }) => theme.neutral8};
 
   display: flex;
   align-items: center;

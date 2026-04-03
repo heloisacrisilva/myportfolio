@@ -10,7 +10,7 @@ const Button = styled.button<{ $selected: boolean }>`
   align-items: center;
   justify-content: center;
 
-  background: ${({ theme, $selected }) => ($selected ? theme.neutral10 : 'transparent')};
+  background: ${({ theme, $selected }) => ($selected ? theme.commonColors.pink : 'transparent')};
   border: ${({ theme, $selected }) => ($selected ? 'none' : '0.063rem solid' + theme.commonColors.lightZinc)};
   border-radius: ${({ theme }) => theme.borderRadius.sm};
 

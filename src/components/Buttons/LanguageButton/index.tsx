@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import { Button } from './style';
 import CONSTANTS from '@/config/constants.mjs';
 import { getCookie, setCookie } from '@/utils/cookies.client';
