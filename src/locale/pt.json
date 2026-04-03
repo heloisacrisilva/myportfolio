@@ -10,7 +10,7 @@
     "contact": "Contato"
   },
   "aboutSection": {
-    "title": "Sobre mim"
+    "title": "Sobre mim",
+    "description": "Sou Analista de Tecnologia Júnior, com experiência em transição da área Administrativa de Vendas para a Engenharia de Software. Atuo principalmente com desenvolvimento front-end, além de manutenção de sistemas em Python, prototipação no Figma e suporte em ambientes na GCP.\n\nTenho perfil analítico, organizado e facilidade em lidar com diferentes demandas e stakeholders. Durante meu onboarding, desenvolvi uma aplicação web completa, consolidando minha autonomia e aprendizado rápido.\n\nAtualmente, estou me especializando como desenvolvedora Full Stack Java, com foco em sistemas escaláveis e bem estruturados."
   }
-
 }
