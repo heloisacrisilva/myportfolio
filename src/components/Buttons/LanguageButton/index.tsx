@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { Button } from './style';
 import CONSTANTS from '@/config/constants.mjs';
-import { getCookie, setCookie } from '@/utils/cookies.client';
+import { setCookie } from '@/utils/cookies.client';
 
 const { DEFAULT_LOCALE_DISPLAY } = CONSTANTS;
 

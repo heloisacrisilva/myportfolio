@@ -1,21 +1,16 @@
+'use client';
+
+import { AboutSection } from '@/components/Sections/aboutSection';
 import * as S from './style';
 import { Header } from '@/components/Header';
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale: lang } = await params;
+export default function Home({ params }: { params: { locale: string } }) {
+  const { locale: lang } = params;
 
   return (
     <S.Container>
       <Header lang={lang} />
-      <S.LogoContent>
-        <S.InfoContent>
-          <S.Title></S.Title>
-        </S.InfoContent>
-      </S.LogoContent>
+      <AboutSection lang={lang} />
     </S.Container>
   );
 }

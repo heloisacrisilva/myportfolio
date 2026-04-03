@@ -22,7 +22,7 @@ export const Header = ({ lang }: HeaderProps) => {
       </S.Nav>
 
       <S.Sections>
-        <S.SectionsItem $active href={`/${lang}/about`}>
+        <S.SectionsItem $active href={`/${lang}/`}>
           {t('about')}
         </S.SectionsItem>
 

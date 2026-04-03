@@ -7,8 +7,9 @@
     "about": "About",
     "stack": "Stack",
     "projects": "Projects",
-    "contact": "Contact",
-    "PT": "PT",
-    "EN": "EN"
+    "contact": "Contact"
+  },
+  "aboutSection": {
+    "title": "About me"
   }
 }

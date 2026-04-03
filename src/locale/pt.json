@@ -7,8 +7,10 @@
     "about": "Sobre",
     "stack": "Tecnologias",
     "projects": "Projetos",
-    "contact": "Contato",
-    "PT": " PT",
-    "EN": "EN"
+    "contact": "Contato"
+  },
+  "aboutSection": {
+    "title": "Sobre mim"
   }
+
 }
