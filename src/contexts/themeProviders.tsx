@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 import { DefaultTheme, ThemeProvider as StyledThemeProvider } from 'styled-components';
 
@@ -18,21 +18,19 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProviderContext = ({ children }: ThemeProviderProps) => {
-  type ThemeName = keyof typeof themes;
+  const [theme, setTheme] = useState<DefaultTheme>(themes.darkTheme);
 
-  const [theme, setTheme] = useState<DefaultTheme>(() => {
-    if (typeof window !== 'undefined') {
-      const storedTheme = localStorage.getItem('theme') as ThemeName | null;
-      if (storedTheme && themes[storedTheme]) {
-        return themes[storedTheme];
-      }
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme && themes[storedTheme]) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setTheme(themes[storedTheme]);
     }
-    return themes.darkTheme;
-  });
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <StyledThemeProvider theme={theme ?? themes.darkTheme}>{children}</StyledThemeProvider>
+      <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   );
 };
