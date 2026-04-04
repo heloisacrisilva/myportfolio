@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Section = styled.div`
   width: 100%;
   height: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 4rem;
   display: flex;
-  gap: 2rem;
+  gap: 6rem;
 `;
 
 export const TextBox = styled.div`
