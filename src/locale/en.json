@@ -1,5 +1,37 @@
 {
-  "Home": {
+  "home": {
     "title": "Welcome"
+  },
+  "header": {
+    "owner": "Heloísa Silva",
+    "about": "About",
+    "stack": "Stack",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "aboutSection": {
+    "title": "About me",
+    "subtitle": "Technology Analyst | Junior Developer",
+    "description": "With nearly 6 years of professional experience, I blend analytical rigor from my administrative background with the agility of Software Engineering.\n My current focus is on Front-end development using TypeScript and Next.js, alongside UI/UX design in Figma and GCP infrastructure. I am currently expanding into Back-end development, aiming to master efficient API creation and scalable systems with Java."
+  },
+  "stackSection": {
+    "title": "Technologies & Tools",
+    "subtitle": "My toolbox is carefully selected to ensure performance and scalability.",
+    "titleNext": "Next.js",
+    "titleTypeScript": "TypeScript",
+    "titleNodejs": "Node.js",
+    "titleJava": "Java",
+    "titleFigma": "Figma",
+    "titleGCP": "GCP",
+    "titlePostgreSQL": "PostgreSQL",
+    "titleGIT": "GIT",
+    "desc_next": "Framework for building React web applications",
+    "desc_ts": "Superset of JavaScript with static typing",
+    "desc_nodejs": "JavaScript runtime environment on the server side",
+    "desc_java": "Object-oriented programming language",
+    "desc_figma": "Design and prototyping tool",    
+    "desc_gcp": "Google's cloud platform",
+    "desc_postgresql": "Relational database management system",
+    "desc_git": "Distributed version control system"
   }
 }

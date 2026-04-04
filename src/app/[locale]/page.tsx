@@ -1,17 +1,18 @@
 'use client';
 
-import { useTranslations } from "next-intl";
-import * as S from "./style";
+import { AboutSection } from '@/components/Sections/aboutSection';
+import * as S from './style';
+import { Header } from '@/components/Header';
+import { StackSection } from '@/components/Sections/stackSection';
 
-export default function Home() {
-  const t = useTranslations('Home')
+export default function Home({ params }: { params: { locale: string } }) {
+  const { locale: lang } = params;
+
   return (
-    <S.Container >
-      <S.LogoContent>
-        <S.InfoContent>
-          <S.Title>{t('title')}</S.Title>
-        </S.InfoContent>
-      </S.LogoContent>
+    <S.Container>
+      <Header lang={lang} />
+      <AboutSection lang={lang} />
+      <StackSection lang={lang} />
     </S.Container>
   );
 }

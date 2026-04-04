@@ -1,5 +1,39 @@
 {
-  "Home": {
+  "home": {
     "title": "Bem-vinda"
+  },
+  "header": {
+    "owner": "Heloísa Silva",
+    "about": "Sobre",
+    "stack": "Tecnologias",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "aboutSection": {
+    "title": "Sobre mim",
+    "subtitle": "Analista de TI | Desenvolvedora Júnior",
+    "description": "Com quase 6 anos de trajetória profissional, uno o rigor analítico da minha bagagem administrativa à agilidade da Engenharia de Software.\n Atualmente, foco no desenvolvimento Front-end com TypeScript e Next.js, além da prototipação no Figma e infraestrutura GCP. Expandindo minha atuação para o Back-end, busco dominar a criação de APIs eficientes e sistemas escaláveis com Java."
+  },
+  "stackSection": {
+    "title": "Tecnologias & Ferramentas",
+    "subtitle": "Minha caixa de ferramentas é selecionada para garantir performance e escalabilidade.",
+    "titleNext": "Next.js",
+    "titleTypeScript": "TypeScript",
+    "titleFigma": "Figma",
+    "titleGCP": "GCP",
+    "titleNodejs": "Node.js",
+    "titleJava": "Java",
+    "titleSQL": "SQL",
+    "titlePostgreSQL": "PostgreSQL",
+    "titleGIT": "GIT",
+    "desc_next": "Framework para desenvolvimento de aplicações web React",
+    "desc_ts": "Superset do JavaScript com tipagem estática",
+    "desc_figma": "Ferramenta de design e prototipação",
+    "desc_gcp": "Plataforma de nuvem da Google",
+    "desc_nodejs": "Ambiente de execução JavaScript no lado do servidor",
+    "desc_java": "Linguagem de programação orientada a objetos",
+    "desc_sql": "Linguagem de consulta estruturada",
+    "desc_postgresql": "Sistema de gerenciamento de banco de dados relacional",
+    "desc_git": "Sistema de controle de versão distribuído"
   }
 }
