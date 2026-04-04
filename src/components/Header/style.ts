@@ -31,7 +31,7 @@ export const Sections = styled.div`
   flex: 1;
 `;
 
-export const SectionsItem = styled.a<{ $active?: boolean }>`
+export const SectionsItem = styled.div<{ $active?: boolean }>`
   cursor: pointer;
   color: ${({ theme, $active }) => ($active ? theme.commonColors.pink : theme.commonColors.lightZinc)};
   font-weight: ${({ theme, $active }) => ($active ? theme.fonts.helveticaBold : theme.fonts.helveticaMedium)};

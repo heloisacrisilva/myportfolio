@@ -20,6 +20,14 @@ export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fonts.sizer.xxl};
   color: ${({ theme }) => theme.primaryColor};
   margin-bottom: 1rem;
+
+  background-image: linear-gradient(to right, ${({ theme }) => theme.commonColors.pink} 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem; 
+  background-position: 0 112%;
+
+  display: inline-block; 
+  width: fit-content;
 `;
 
 export const Description = styled.span`
