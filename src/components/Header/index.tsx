@@ -1,12 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as S from './style';
 import { getTranslation } from '@/utils/i18n';
 import LanguageButton from '../Buttons/LanguageButton';
 import CONSTANTS from '@/config/constants.mjs';
 import ThemeSwitcher from '../Buttons/ThemeSwitcher';
-import { Link as ToScrool } from 'react-scroll';
+import dynamic from 'next/dynamic';
+
+const ToScrool = dynamic(
+  () => import('react-scroll').then((mod) => mod.Link),
+  { ssr: false }
+);
 
 const { AVAILABLE_LOCALES } = CONSTANTS;
 
