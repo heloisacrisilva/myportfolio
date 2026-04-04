@@ -32,12 +32,17 @@ export const Sections = styled.div`
 `;
 
 export const SectionsItem = styled.a<{ $active?: boolean }>`
+  cursor: pointer;
   color: ${({ theme, $active }) => ($active ? theme.commonColors.pink : theme.commonColors.lightZinc)};
   font-weight: ${({ theme, $active }) => ($active ? theme.fonts.helveticaBold : theme.fonts.helveticaMedium)};
 
   text-decoration: ${({ $active }) => ($active ? 'underline' : 'none')};
   text-decoration-thickness: ${({ $active }) => ($active ? '2px' : '0')};
   text-underline-offset: ${({ $active }) => ($active ? '6px' : '0')};
+
+  &:hover {
+    color: ${({ theme }) => theme.commonColors.lightPink};
+  }
 `;
 
 export const LocaleBox = styled.div`

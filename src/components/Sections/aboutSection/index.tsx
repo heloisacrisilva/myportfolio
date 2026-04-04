@@ -10,7 +10,7 @@ interface AboutSectionProps {
 export const AboutSection = ({ lang }: AboutSectionProps) => {
   const t = getTranslation(lang, 'aboutSection');
   return (
-    <S.Section>
+    <S.Section id='AboutSection'>
       <S.TextBox>
         <S.Title>{t('title')}</S.Title>
         <S.Description>{t('description')}</S.Description>

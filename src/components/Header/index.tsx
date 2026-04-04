@@ -8,6 +8,8 @@ import ThemeSwitcher from '../Buttons/ThemeSwitcher';
 
 const { AVAILABLE_LOCALES } = CONSTANTS;
 
+import { Link as ToScrool } from 'react-scroll';
+
 interface HeaderProps {
   lang: string;
 }
@@ -22,20 +24,25 @@ export const Header = ({ lang }: HeaderProps) => {
       </S.Nav>
 
       <S.Sections>
-        <S.SectionsItem $active href={`/${lang}/`}>
-          {t('about')}
+        <S.SectionsItem>
+          <ToScrool to="AboutSection" activeClass="active" spy={true} smooth={true} duration={1000}>
+            {t('about')}
+          </ToScrool>
         </S.SectionsItem>
-
-        <S.SectionsItem href={`/${lang}/stack`}>
-          {t('stack')}
-        </S.SectionsItem>
-
-        <S.SectionsItem href={`/${lang}/projects`}>
-          {t('projects')}
-        </S.SectionsItem>
-
-        <S.SectionsItem href={`/${lang}/contact`}>
-          {t('contact')}
+        <S.SectionsItem>
+          <ToScrool to="StackSection" activeClass="active" spy={true} smooth={true} duration={1000}>
+            {t('stack')}
+          </ToScrool>
+        </S.SectionsItem>{' '}
+        <S.SectionsItem>
+          <ToScrool to="ProjectsSection" activeClass="active" spy={true} smooth={true} duration={1000}>
+            {t('projects')}
+          </ToScrool>
+        </S.SectionsItem>{' '}
+        <S.SectionsItem>
+          <ToScrool to="ContactSection" activeClass="active" spy={true} smooth={true} duration={1000}>
+            {t('contact')}
+          </ToScrool>
         </S.SectionsItem>
       </S.Sections>
 
@@ -43,7 +50,7 @@ export const Header = ({ lang }: HeaderProps) => {
 
       <S.LocaleBox>
         {AVAILABLE_LOCALES.map((locale) => (
-          <LanguageButton  key={locale} lang={locale} currentLang={lang} />
+          <LanguageButton key={locale} lang={locale} currentLang={lang} />
         ))}
       </S.LocaleBox>
     </S.Container>
