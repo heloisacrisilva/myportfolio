@@ -11,6 +11,7 @@
   },
   "aboutSection": {
     "title": "About me",
-    "description": "Technology Analyst | Junior Developer\n\nWith nearly 6 years of professional experience, I blend analytical rigor from my administrative background with the agility of Software Engineering.\n My current focus is on Front-end development using TypeScript and Next.js, alongside UI/UX design in Figma and GCP infrastructure. I am currently expanding into Back-end development, aiming to master efficient API creation and scalable systems with Java."
+    "subtitle": "Technology Analyst | Junior Developer",
+    "description": "With nearly 6 years of professional experience, I blend analytical rigor from my administrative background with the agility of Software Engineering.\n My current focus is on Front-end development using TypeScript and Next.js, alongside UI/UX design in Figma and GCP infrastructure. I am currently expanding into Back-end development, aiming to master efficient API creation and scalable systems with Java."
   }
 }

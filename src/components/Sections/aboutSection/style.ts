@@ -41,3 +41,15 @@ export const ImageBox = styled.div`
   border-radius: 1rem;
   align-items: center;
 `;
+
+export const SubtitleBox = styled.div`
+  background-color: ${({ theme }) => theme.commonColors.lightPink};
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 1rem;
+`;
+
+export const Subtitle = styled.h2`
+  font-size: ${({ theme }) => theme.fonts.sizer.sm};
+  color: ${({ theme }) => theme.commonColors.pink};
+`;

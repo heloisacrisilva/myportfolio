@@ -10,7 +10,7 @@ const commonTheme: iCommonTheme = {
     darkZinc25: '#1E1E1E25' /* darkZinc with opacity 25% */,
 
     pink: '#E91E63',
-    lightPink: '#c84c69' ,
+    lightPink: '#f4c5d0' ,
     neutral: '#8a7174' ,
 
     neutral25: '#00000025' /*Black opacity 25%*/,
