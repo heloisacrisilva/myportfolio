@@ -1,14 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import * as S from './style';
 import { getTranslation } from '@/utils/i18n';
 import LanguageButton from '../Buttons/LanguageButton';
 import CONSTANTS from '@/config/constants.mjs';
 import ThemeSwitcher from '../Buttons/ThemeSwitcher';
+import { Link as ToScrool } from 'react-scroll';
 
 const { AVAILABLE_LOCALES } = CONSTANTS;
-
-import { Link as ToScrool } from 'react-scroll';
 
 interface HeaderProps {
   lang: string;
@@ -16,6 +16,15 @@ interface HeaderProps {
 
 export const Header = ({ lang }: HeaderProps) => {
   const t = getTranslation(lang, 'header');
+  
+  const [activeSection, setActiveSection] = useState('AboutSection');
+
+  const navItems = [
+    { id: 'AboutSection', label: t('about') },
+    { id: 'StackSection', label: t('stack') },
+    { id: 'ProjectsSection', label: t('projects') },
+    { id: 'ContactSection', label: t('contact') },
+  ];
 
   return (
     <S.Container>
@@ -24,26 +33,20 @@ export const Header = ({ lang }: HeaderProps) => {
       </S.Nav>
 
       <S.Sections>
-        <S.SectionsItem>
-          <ToScrool to="AboutSection" activeClass="active" spy={true} smooth={true} duration={1000}>
-            {t('about')}
-          </ToScrool>
-        </S.SectionsItem>
-        <S.SectionsItem>
-          <ToScrool to="StackSection" activeClass="active" spy={true} smooth={true} duration={1000}>
-            {t('stack')}
-          </ToScrool>
-        </S.SectionsItem>{' '}
-        <S.SectionsItem>
-          <ToScrool to="ProjectsSection" activeClass="active" spy={true} smooth={true} duration={1000}>
-            {t('projects')}
-          </ToScrool>
-        </S.SectionsItem>{' '}
-        <S.SectionsItem>
-          <ToScrool to="ContactSection" activeClass="active" spy={true} smooth={true} duration={1000}>
-            {t('contact')}
-          </ToScrool>
-        </S.SectionsItem>
+        {navItems.map((item) => (
+          <S.SectionsItem key={item.id} $active={activeSection === item.id}>
+            <ToScrool
+              to={item.id}
+              spy={true}
+              smooth={true}
+              duration={1000}
+              onSetActive={() => setActiveSection(item.id)}
+              onClick={() => setActiveSection(item.id)}
+            >
+              {item.label}
+            </ToScrool>
+          </S.SectionsItem>
+        ))}
       </S.Sections>
 
       <ThemeSwitcher />

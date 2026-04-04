@@ -41,7 +41,7 @@ export const SectionsItem = styled.a<{ $active?: boolean }>`
   text-underline-offset: ${({ $active }) => ($active ? '6px' : '0')};
 
   &:hover {
-    color: ${({ theme }) => theme.commonColors.lightPink};
+    color: ${({ theme }) => theme.commonColors.pink};
   }
 `;
 
