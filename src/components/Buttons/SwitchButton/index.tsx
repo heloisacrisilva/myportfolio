@@ -5,9 +5,9 @@ const SwitchButton = ({ ...props }) => {
   return (
     <S.Button onClick={props.onToggle}>
       {props.value ? (
-          <MoonIcon size={20} weight='fill'/>
+          <MoonIcon size={20}/>
         ) : (
-          <SunIcon size={20} weight='fill'/>
+          <SunIcon size={20} />
         )}
     </S.Button>
   );

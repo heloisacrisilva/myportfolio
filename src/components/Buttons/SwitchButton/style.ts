@@ -13,10 +13,10 @@ export const Button = styled.div`
   cursor: pointer;
 
   color: ${({ theme }) => theme.neutral15};
-
   transition: all 0.5s ease;
 
   &:hover {
     transform: scale(1.1);
+    color: ${({ theme }) => theme.commonColors.pink};
   }
 `;
