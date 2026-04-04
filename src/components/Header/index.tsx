@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './style';
 import { getTranslation } from '@/utils/i18n';
 import LanguageButton from '../Buttons/LanguageButton';
@@ -16,7 +16,7 @@ interface HeaderProps {
 
 export const Header = ({ lang }: HeaderProps) => {
   const t = getTranslation(lang, 'header');
-  
+
   const [activeSection, setActiveSection] = useState('AboutSection');
 
   const navItems = [
@@ -41,8 +41,7 @@ export const Header = ({ lang }: HeaderProps) => {
               smooth={true}
               duration={1000}
               onSetActive={() => setActiveSection(item.id)}
-              onClick={() => setActiveSection(item.id)}
-            >
+              onClick={() => setActiveSection(item.id)}>
               {item.label}
             </ToScrool>
           </S.SectionsItem>

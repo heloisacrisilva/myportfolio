@@ -33,6 +33,11 @@ export const GlobalStyle = createGlobalStyle`
     overflow-y: hidden;
   }
 
+  ::selection {
+    background-color: ${({ theme }) => theme.neutral9};
+    color: ${({ theme }) => theme.primaryColor};;
+  }
+
   body {
     color: ${({ theme }) => theme.secondaryColor};;
     background: ${({ theme }) => theme.secondaryBackground};
