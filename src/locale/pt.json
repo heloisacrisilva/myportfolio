@@ -9,6 +9,9 @@
     "projects": "Projetos",
     "contact": "Contato"
   },
+  "footer": {
+    "backToTop": "Voltar ao topo"
+  },
   "aboutSection": {
     "title": "Sobre mim",
     "subtitle": "Analista de TI | Desenvolvedora Júnior",

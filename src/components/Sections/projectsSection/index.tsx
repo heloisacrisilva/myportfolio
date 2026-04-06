@@ -2,7 +2,6 @@
 
 import { getTranslation } from '@/utils/i18n';
 import * as S from './style';
-import { useTheme } from '@/contexts/themeProviders';
 
 interface ProjectsSectionProps {
   lang: string;

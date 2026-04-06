@@ -9,6 +9,9 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+  "footer": {
+    "backToTop": "Back to Top"
+  },
   "aboutSection": {
     "title": "About me",
     "subtitle": "Technology Analyst | Junior Developer",
