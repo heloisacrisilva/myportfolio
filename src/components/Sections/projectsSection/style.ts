@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Section = styled.div`
   width: 100%;
   padding: 4rem;
+  min-height: calc(100vh - 4rem);
 `;
 
 export const TextBox = styled.div`
@@ -35,7 +36,9 @@ export const GitHubLink = styled.a`
   background-color: ${({ theme }) => theme.commonColors.lightPink};
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 
   &:hover {
     background-color: ${({ theme }) => theme.primaryColor};
