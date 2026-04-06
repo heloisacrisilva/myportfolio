@@ -32,6 +32,7 @@
     "desc_figma": "Design and prototyping tool",    
     "desc_gcp": "Google's cloud platform",
     "desc_postgresql": "Relational database management system",
-    "desc_git": "Distributed version control system"
+    "desc_git": "Distributed version control system",
+    "learning": "Learning"
   }
 }

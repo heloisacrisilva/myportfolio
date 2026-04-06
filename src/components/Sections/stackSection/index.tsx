@@ -5,7 +5,6 @@ import * as S from './style';
 import StackCard from '@/components/Cards/StackCard';
 import { SiGooglecloud, SiNodedotjs, SiFigma, SiPostgresql, SiGit } from 'react-icons/si';
 import { RiJavaFill, RiJavascriptFill, RiNextjsLine } from 'react-icons/ri';
-import { use } from 'react';
 import { useTheme } from '@/contexts/themeProviders';
 
 interface StackSectionProps {
@@ -36,6 +35,8 @@ export const StackSection = ({ lang }: StackSectionProps) => {
       title: t('titleJava'),
       description: t('desc_java'),
       icon: <RiJavaFill size={24} color={theme.theme.commonColors.pink} />,
+      learning: true,
+      t: t('learning') 
     },
     {
       title: t('titleFigma'),
@@ -67,7 +68,7 @@ export const StackSection = ({ lang }: StackSectionProps) => {
       </S.TextBox>
       <S.CardsBox>
         {stacks.map((stack) => (
-          <StackCard key={stack.title} title={stack.title} description={stack.description} icon={stack.icon} />
+          <StackCard key={stack.title} title={stack.title} description={stack.description} icon={stack.icon} learning={stack.learning} t={stack.t} />
         ))}
       </S.CardsBox>
     </S.Section>

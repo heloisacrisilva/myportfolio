@@ -34,6 +34,7 @@
     "desc_java": "Linguagem de programação orientada a objetos",
     "desc_sql": "Linguagem de consulta estruturada",
     "desc_postgresql": "Sistema de gerenciamento de banco de dados relacional",
-    "desc_git": "Sistema de controle de versão distribuído"
+    "desc_git": "Sistema de controle de versão distribuído",
+    "learning": "Aprendendo"
   }
 }
