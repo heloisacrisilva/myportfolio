@@ -40,5 +40,18 @@
   "projectsSection": {
     "title": "Projetos",
     "subtitle": "Em construção..."
+  },
+  "contactSection": {
+    "title": "Fique à vontade para entrar em contato!",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "submit": "Enviar",
+    "namePlaceholder": "Digite seu nome",
+    "emailPlaceholder": "Digite seu email",
+    "messagePlaceholder": "Digite sua mensagem",
+    "submitSuccess": "Mensagem enviada com sucesso!",
+    "submitError": "Falha ao enviar mensagem. Por favor, tente novamente mais tarde.",
+    "submitEmpty": "Por favor, preencha todos os campos."
   }
 }

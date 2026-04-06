@@ -38,5 +38,18 @@
   "projectsSection": {
     "title": "Projects",
     "subtitle": "Under construction..."
+  },
+  "contactSection": {
+    "title": "Feel free to get in touch!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email",
+    "messagePlaceholder": "Enter your message",
+    "submitSuccess": "Message sent successfully!",
+    "submitError": "Failed to send message. Please try again later.",
+    "submitEmpty": "Please fill in all fields."
   }
 }
