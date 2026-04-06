@@ -36,5 +36,9 @@
     "desc_postgresql": "Sistema de gerenciamento de banco de dados relacional",
     "desc_git": "Sistema de controle de versão distribuído",
     "learning": "Aprendendo"
+  },
+  "projectsSection": {
+    "title": "Projetos",
+    "subtitle": "Em construção..."
   }
 }
