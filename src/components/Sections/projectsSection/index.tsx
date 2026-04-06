@@ -9,6 +9,7 @@ interface ProjectsSectionProps {
 
 export const ProjectsSection = ({ lang }: ProjectsSectionProps) => {
   const t = getTranslation(lang, 'projectsSection');
+  const GitHubProfile = 'https://github.com/heloisacrisilva';
 
   //   const projects = [
   //     {
@@ -23,10 +24,12 @@ export const ProjectsSection = ({ lang }: ProjectsSectionProps) => {
       <S.TextBox>
         <S.Title>{t('title')}</S.Title>
         <S.Subtitle>{t('subtitle')}</S.Subtitle>
-        <S.GitHubLink href="https://github.com/heloisacrisilva" target="_blank" title="GitHub">
-          {t('gitHub')}: {t('githubLink')}
-        </S.GitHubLink>
       </S.TextBox>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '3rem' }}>
+        <S.GitHubLink href={GitHubProfile} target="_blank" title="GitHub">
+          {t('gitHub')}
+        </S.GitHubLink>
+      </div>
     </S.Section>
   );
 };

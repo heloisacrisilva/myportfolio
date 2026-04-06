@@ -40,7 +40,8 @@
   },
   "projectsSection": {
     "title": "Projects",
-    "subtitle": "Under construction..."
+    "subtitle": "Under construction...",
+    "gitHub": "View on GitHub"
   },
   "contactSection": {
     "title": "Feel free to get in touch!",

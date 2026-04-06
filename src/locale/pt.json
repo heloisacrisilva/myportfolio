@@ -42,7 +42,8 @@
   },
   "projectsSection": {
     "title": "Projetos",
-    "subtitle": "Em construção..."
+    "subtitle": "Em construção...",
+    "gitHub": "Ver no GitHub"
   },
   "contactSection": {
     "title": "Fique à vontade para entrar em contato!",

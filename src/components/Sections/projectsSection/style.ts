@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const Section = styled.div`
-  width: 100%;
-  padding: 8rem 4rem;
+  width: 100vw;
   min-height: calc(100vh - 4rem);
+  padding: 8rem 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const TextBox = styled.div`
@@ -30,6 +33,8 @@ export const Subtitle = styled.h3`
 `;
 
 export const GitHubLink = styled.a`
+  width: 100%;
+  height: 100%;
   font-size: ${({ theme }) => theme.fonts.sizer.md};
   color: ${({ theme }) => theme.commonColors.primary};
   text-decoration: none;
