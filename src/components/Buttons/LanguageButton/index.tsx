@@ -22,7 +22,7 @@ const LanguageButton = ({ lang, currentLang }: LanguageButtonProps) => {
     const newLocale = lang.split('-')[0];
 
     setCookie('locale', newLocale);
-    router.push(`/${newLocale}`);
+    router.push(`/${newLocale}`, { scroll: false });
   }
 
   return (
