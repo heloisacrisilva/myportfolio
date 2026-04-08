@@ -4,6 +4,7 @@ export const FormsBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 `;
 
 export const Ttile = styled.h1`
@@ -19,7 +20,7 @@ export const Form = styled.form`
   gap: 1rem;
   width: 100%;
   max-width: 50%;
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 0.5rem;
 `;
 

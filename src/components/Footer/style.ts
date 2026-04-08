@@ -9,7 +9,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   gap: 1rem;
   border-top: 1px solid ${({ theme }) => theme.neutral8};
-  position: fixed;
+  position: sticky;
   bottom: 0;
   align-items: center;
   justify-content: center;

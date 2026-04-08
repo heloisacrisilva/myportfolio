@@ -49,13 +49,15 @@
     "title": "Fique à vontade para entrar em contato!",
     "name": "Nome",
     "email": "Email",
+    "subject": "Assunto",
     "message": "Mensagem",
     "submit": "Enviar",
     "namePlaceholder": "Digite seu nome",
     "emailPlaceholder": "Digite seu email",
+    "subjectPlaceholder": "Digite o assunto",
     "messagePlaceholder": "Digite sua mensagem",
     "submitSuccess": "Mensagem enviada com sucesso!",
     "submitError": "Falha ao enviar mensagem. Por favor, tente novamente mais tarde.",
-    "submitEmpty": "Por favor, preencha todos os campos."
+    "submitLoading": "Enviando mensagem..."
   }
 }

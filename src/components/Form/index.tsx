@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { getTranslation } from '@/utils/i18n';
 import * as S from './style';
+import { useForm } from '@formspree/react';
 
 interface ContactForm {
   lang: string;
@@ -10,22 +11,28 @@ interface ContactForm {
 
 export const ContactForm = ({ lang }: ContactForm) => {
   const t = getTranslation(lang, 'contactSection');
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'success' | 'empty' | 'error'>('idle');
+  const [form, setForm] = useState({ name: '', email: '', message: '', subject: '' });
+  const [status, setStatus] = useState<'idle' | 'success' | 'loading' | 'error'>('idle');
+  const [state, handleSubmitForm] = useForm(process.env.NEXT_PUBLIC_FORM_ID || '');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (form.name && form.email && form.message) {
-      setStatus('success');
-      setForm({ name: '', email: '', message: '' });
-    } else if (!form.name || !form.email || !form.message) {
-      setStatus('empty');
-    } else {
+    setStatus('loading');
+
+    try {
+      await handleSubmitForm(e);
+
+      if (!state.errors) {
+        setStatus('success');
+        setForm({ name: '', email: '', message: '', subject: '' });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
       setStatus('error');
     }
   };
@@ -50,6 +57,18 @@ export const ContactForm = ({ lang }: ContactForm) => {
           aria-required="true"
         />
 
+        <label htmlFor="subject">{t('subject')}</label>
+        <S.Input
+          id="subject"
+          type="text"
+          name="subject"
+          placeholder={t('subjectPlaceholder')}
+          value={form.subject}
+          onChange={handleChange}
+          required
+          aria-required="true"
+        />
+
         <label htmlFor="message">{t('message')}</label>
         <S.TextArea
           id="message"
@@ -65,7 +84,7 @@ export const ContactForm = ({ lang }: ContactForm) => {
         <S.Button type="submit">{t('submit')}</S.Button>
 
         {status === 'success' && <span style={{ color: 'green', marginTop: '1rem' }}>{t('submitSuccess')}</span>}
-        {status === 'empty' && <span style={{ color: 'red', marginTop: '1rem' }}>{t('submitEmpty')}</span>}
+        {status === 'loading' && <span style={{ color: 'gray', marginTop: '1rem' }}>{t('submitLoading')}</span>}
         {status === 'error' && <span style={{ color: 'red', marginTop: '1rem' }}>{t('submitError')}</span>}
       </S.Form>
     </S.FormsBox>

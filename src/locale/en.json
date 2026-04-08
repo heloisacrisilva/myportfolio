@@ -47,13 +47,15 @@
     "title": "Feel free to get in touch!",
     "name": "Name",
     "email": "Email",
+    "subject": "Subject",
     "message": "Message",
     "submit": "Submit",
     "namePlaceholder": "Enter your name",
     "emailPlaceholder": "Enter your email",
+    "subjectPlaceholder": "Enter the subject",
     "messagePlaceholder": "Enter your message",
     "submitSuccess": "Message sent successfully!",
     "submitError": "Failed to send message. Please try again later.",
-    "submitEmpty": "Please fill in all fields."
+    "submitLoading": "Sending message..."
   }
 }
