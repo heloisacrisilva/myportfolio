@@ -9,6 +9,9 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+  "footer": {
+    "backToTop": "Back to Top"
+  },
   "aboutSection": {
     "title": "About me",
     "subtitle": "Technology Analyst | Junior Developer",
@@ -29,9 +32,30 @@
     "desc_ts": "Superset of JavaScript with static typing",
     "desc_nodejs": "JavaScript runtime environment on the server side",
     "desc_java": "Object-oriented programming language",
-    "desc_figma": "Design and prototyping tool",    
+    "desc_figma": "Design and prototyping tool",
     "desc_gcp": "Google's cloud platform",
     "desc_postgresql": "Relational database management system",
-    "desc_git": "Distributed version control system"
+    "desc_git": "Distributed version control system",
+    "learning": "Learning"
+  },
+  "projectsSection": {
+    "title": "Projects",
+    "subtitle": "Under construction...",
+    "gitHub": "View on GitHub"
+  },
+  "contactSection": {
+    "title": "Feel free to get in touch!",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Submit",
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email",
+    "subjectPlaceholder": "Enter the subject",
+    "messagePlaceholder": "Enter your message",
+    "submitSuccess": "Message sent successfully!",
+    "submitError": "Failed to send message. Please try again later.",
+    "submitLoading": "Sending message..."
   }
 }

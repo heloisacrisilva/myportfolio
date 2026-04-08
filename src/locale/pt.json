@@ -9,6 +9,9 @@
     "projects": "Projetos",
     "contact": "Contato"
   },
+  "footer": {
+    "backToTop": "Voltar ao topo"
+  },
   "aboutSection": {
     "title": "Sobre mim",
     "subtitle": "Analista de TI | Desenvolvedora Júnior",
@@ -34,6 +37,27 @@
     "desc_java": "Linguagem de programação orientada a objetos",
     "desc_sql": "Linguagem de consulta estruturada",
     "desc_postgresql": "Sistema de gerenciamento de banco de dados relacional",
-    "desc_git": "Sistema de controle de versão distribuído"
+    "desc_git": "Sistema de controle de versão distribuído",
+    "learning": "Aprendendo"
+  },
+  "projectsSection": {
+    "title": "Projetos",
+    "subtitle": "Em construção...",
+    "gitHub": "Ver no GitHub"
+  },
+  "contactSection": {
+    "title": "Fique à vontade para entrar em contato!",
+    "name": "Nome",
+    "email": "Email",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "submit": "Enviar",
+    "namePlaceholder": "Digite seu nome",
+    "emailPlaceholder": "Digite seu email",
+    "subjectPlaceholder": "Digite o assunto",
+    "messagePlaceholder": "Digite sua mensagem",
+    "submitSuccess": "Mensagem enviada com sucesso!",
+    "submitError": "Falha ao enviar mensagem. Por favor, tente novamente mais tarde.",
+    "submitLoading": "Enviando mensagem..."
   }
 }

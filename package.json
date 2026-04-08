@@ -10,6 +10,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@phosphor-icons/react": "^2.1.10",
     "babel-plugin-styled-components": "^2.1.4",
     "next": "^14.2.35",

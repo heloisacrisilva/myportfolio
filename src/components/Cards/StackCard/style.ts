@@ -29,3 +29,17 @@ export const IconList = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
 `;
+
+export const LearningBadge = styled.div`
+  background-color: ${({ theme }) => theme.primaryBackground}80;
+  color: ${({ theme }) => theme.primaryColor};
+  padding: 0.25rem 0.5rem;
+  font-size: ${({ theme }) => theme.fonts.sizer.sm};
+  border-radius: 0.5rem;
+`;
+
+export const HeaderCard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+`;

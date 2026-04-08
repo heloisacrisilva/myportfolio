@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: calc(100vh - 4rem);
   padding: 4rem 4rem;
   display: flex;
   gap: 6rem;
