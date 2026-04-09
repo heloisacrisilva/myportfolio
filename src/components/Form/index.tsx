@@ -38,55 +38,68 @@ export const ContactForm = ({ lang }: ContactForm) => {
   };
 
   return (
-    <S.FormsBox>
-      <S.Form onSubmit={handleSubmit} noValidate>
-        <S.Ttile>{t('title')}</S.Ttile>
+    <S.Form onSubmit={handleSubmit} noValidate>
+      <S.Title>{t('title')}</S.Title>
 
-        <label htmlFor="name">{t('name')}</label>
-        <S.Input id="name" type="text" name="name" placeholder={t('namePlaceholder')} value={form.name} onChange={handleChange} required aria-required="true" />
+      <S.Label htmlFor="email">{t('email')}</S.Label>
+      <S.Input
+        id="email"
+        type="email"
+        name="email"
+        placeholder={t('emailPlaceholder')}
+        value={form.email}
+        onChange={handleChange}
+        required
+        aria-required="true"
+      />
 
-        <label htmlFor="email">{t('email')}</label>
-        <S.Input
-          id="email"
-          type="email"
-          name="email"
-          placeholder={t('emailPlaceholder')}
-          value={form.email}
-          onChange={handleChange}
-          required
-          aria-required="true"
-        />
+      <S.Line>
+        <S.InputContainer>
+          <S.Label htmlFor="name">{t('name')}</S.Label>
+          <S.Input
+            id="name"
+            type="text"
+            name="name"
+            placeholder={t('namePlaceholder')}
+            value={form.name}
+            onChange={handleChange}
+            required
+            aria-required="true"
+          />
+        </S.InputContainer>
+        <S.InputContainer>
+          <S.Label htmlFor="subject">{t('subject')}</S.Label>
+          <S.Input
+            id="subject"
+            type="text"
+            name="subject"
+            placeholder={t('subjectPlaceholder')}
+            value={form.subject}
+            onChange={handleChange}
+            required
+            aria-required="true"
+          />
+        </S.InputContainer>
+      </S.Line>
 
-        <label htmlFor="subject">{t('subject')}</label>
-        <S.Input
-          id="subject"
-          type="text"
-          name="subject"
-          placeholder={t('subjectPlaceholder')}
-          value={form.subject}
-          onChange={handleChange}
-          required
-          aria-required="true"
-        />
+      <S.Label htmlFor="message">{t('message')}</S.Label>
+      <S.TextArea
+        id="message"
+        name="message"
+        placeholder={t('messagePlaceholder')}
+        value={form.message}
+        onChange={handleChange}
+        required
+        aria-required="true"
+        rows={5}
+      />
 
-        <label htmlFor="message">{t('message')}</label>
-        <S.TextArea
-          id="message"
-          name="message"
-          placeholder={t('messagePlaceholder')}
-          value={form.message}
-          onChange={handleChange}
-          required
-          aria-required="true"
-          rows={5}
-        />
+      <S.Button type="submit" disabled={status === 'loading'}>
+        {status === 'loading' ? t('submitLoading') : t('submit')}
+      </S.Button>
 
-        <S.Button type="submit">{t('submit')}</S.Button>
-
-        {status === 'success' && <span style={{ color: 'green', marginTop: '1rem' }}>{t('submitSuccess')}</span>}
-        {status === 'loading' && <span style={{ color: 'gray', marginTop: '1rem' }}>{t('submitLoading')}</span>}
-        {status === 'error' && <span style={{ color: 'red', marginTop: '1rem' }}>{t('submitError')}</span>}
-      </S.Form>
-    </S.FormsBox>
+      {status === 'success' && <span style={{ color: 'green', marginTop: '1rem' }}>{t('submitSuccess')}</span>}
+      {status === 'error' && <span style={{ color: 'red', marginTop: '1rem' }}>{t('submitError')}</span>}
+    </S.Form>
   );
 };

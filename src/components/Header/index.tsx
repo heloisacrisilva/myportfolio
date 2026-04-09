@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import * as S from './style';
 import { getTranslation } from '@/utils/i18n';
 import LanguageButton from '../Buttons/LanguageButton';
@@ -8,10 +8,7 @@ import CONSTANTS from '@/config/constants.mjs';
 import ThemeSwitcher from '../Buttons/ThemeSwitcher';
 import dynamic from 'next/dynamic';
 
-const ToScrool = dynamic(
-  () => import('react-scroll').then((mod) => mod.Link),
-  { ssr: false }
-);
+const ToScrool = dynamic(() => import('react-scroll').then((mod) => mod.Link), { ssr: false });
 
 const { AVAILABLE_LOCALES } = CONSTANTS;
 
@@ -24,12 +21,36 @@ export const Header = ({ lang }: HeaderProps) => {
 
   const [activeSection, setActiveSection] = useState('AboutSection');
 
-  const navItems = [
-    { id: 'AboutSection', label: t('about') },
-    { id: 'StackSection', label: t('stack') },
-    { id: 'ProjectsSection', label: t('projects') },
-    { id: 'ContactSection', label: t('contact') },
-  ];
+  const navItems = useMemo(
+    () => [
+      { id: 'AboutSection', label: t('about') },
+      { id: 'StackSection', label: t('stack') },
+      { id: 'ProjectsSection', label: t('projects') },
+      { id: 'ContactSection', label: t('contact') },
+    ],
+    [t]
+  );
+
+  useEffect(() => {
+    const sections = navItems.map((item) => document.getElementById(item.id));
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100;
+
+      sections.forEach((section, index) => {
+        if (!section) return;
+
+        if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+          setActiveSection(navItems[index].id);
+        }
+      });
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [navItems]);
 
   return (
     <S.Container>

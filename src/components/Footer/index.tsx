@@ -1,6 +1,6 @@
 import { getTranslation } from '@/utils/i18n';
 import * as S from './style';
-import { FaLinkedin, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp, FaArrowUp, FaGithub } from 'react-icons/fa';
 
 interface FooterProps {
   lang: string;
@@ -13,8 +13,8 @@ export const Footer = ({ lang }: FooterProps) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const LinkedinURI = 'https://www.linkedin.com/in/heloisacrissilva/'
-  const WhatsAppURI = 'https://wa.me/5547992667703'
+  const LinkedinURI = 'https://www.linkedin.com/in/heloisacrissilva/';
+  const GitHubURI = 'https://github.com/heloisacrisilva'
 
   return (
     <S.FooterContainer>
@@ -25,8 +25,8 @@ export const Footer = ({ lang }: FooterProps) => {
         <S.BackToTop onClick={handleBackToTop}>
           <FaArrowUp style={{ marginRight: 8 }} /> {t('backToTop')}
         </S.BackToTop>
-        <S.LinkIcon href={WhatsAppURI} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <FaWhatsapp />
+        <S.LinkIcon href={GitHubURI} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <FaGithub />
         </S.LinkIcon>
       </S.Links>
     </S.FooterContainer>

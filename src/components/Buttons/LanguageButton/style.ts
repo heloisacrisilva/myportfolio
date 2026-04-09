@@ -25,4 +25,10 @@ const Button = styled.button<{ $selected: boolean }>`
     transition: all 0.05s ease-out;
     transform: scale(1.05);
   }
+
+  @media screen and (max-width: 868px) {
+    width: 3rem;
+    height: 2rem;
+    font-size: ${({ theme }) => theme.fonts.sizer.sm};
+  }
 `;

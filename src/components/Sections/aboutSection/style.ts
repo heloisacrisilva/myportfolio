@@ -6,6 +6,11 @@ export const Section = styled.div`
   padding: 4rem 4rem;
   display: flex;
   gap: 6rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `;
 
 export const TextBox = styled.div`
@@ -23,11 +28,15 @@ export const Title = styled.h1`
 
   background-image: linear-gradient(to right, ${({ theme }) => theme.commonColors.pink} 50%, transparent 50%);
   background-repeat: no-repeat;
-  background-size: 100% 0.3rem; 
+  background-size: 100% 0.3rem;
   background-position: 0 112%;
 
-  display: inline-block; 
+  display: inline-block;
   width: fit-content;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fonts.sizer.xl};
+  }
 `;
 
 export const Description = styled.span`
@@ -35,12 +44,20 @@ export const Description = styled.span`
   color: ${({ theme }) => theme.primaryColor};
   display: inline-block;
   white-space: pre-line;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${({ theme }) => theme.fonts.sizer.lg};
+  }
 `;
 
 export const Image = styled.img`
   width: 100%;
   height: auto;
   border-radius: 1rem;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 export const ImageBox = styled.div`
@@ -48,6 +65,9 @@ export const ImageBox = styled.div`
   display: flex;
   border-radius: 1rem;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const SubtitleBox = styled.div`

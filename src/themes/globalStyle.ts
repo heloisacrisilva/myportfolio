@@ -29,9 +29,11 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100vw;
   }
 
+
   .noscroll {
     overflow-y: hidden;
   }
+
 
   ::selection {
     background-color: ${({ theme }) => theme.neutral9};
@@ -42,7 +44,6 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.secondaryColor};;
     background: ${({ theme }) => theme.secondaryBackground};
     font-family: HelveticaMedium, sans-serif;
-    position: relative;
   }
 
   a {
@@ -72,8 +73,10 @@ img {
 }
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
     height: 10px;
+    margin: 0px;
+    padding: 0px;
   }
 
   ::-webkit-scrollbar-track {
