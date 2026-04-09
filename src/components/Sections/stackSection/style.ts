@@ -5,6 +5,9 @@ export const Section = styled.div`
   padding: 8rem 4rem;
   background-color: ${({ theme }) => theme.neutral8};
   min-height: calc(100vh - 4rem);
+  @media screen and (max-width: 1280px) {
+    padding: 2rem;
+  }
 `;
 
 export const TextBox = styled.div`
@@ -35,4 +38,8 @@ export const CardsBox = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 `;

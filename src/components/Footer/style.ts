@@ -13,6 +13,7 @@ export const FooterContainer = styled.footer`
   bottom: 0;
   align-items: center;
   justify-content: center;
+  height: 5rem;
 `;
 
 export const Links = styled.div`
