@@ -55,7 +55,8 @@
     "subjectPlaceholder": "Enter the subject",
     "messagePlaceholder": "Enter your message",
     "submitSuccess": "Message sent successfully!",
-    "submitError": "Failed to send message. Please try again later.",
+    "submitError": "Failed to send message. Please verify fields and try again.",
+    "submitEmpty": "Fill in all the fields.",
     "submitLoading": "Sending message..."
   }
 }
