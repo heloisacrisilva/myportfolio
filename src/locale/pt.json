@@ -57,7 +57,8 @@
     "subjectPlaceholder": "Digite o assunto",
     "messagePlaceholder": "Digite sua mensagem",
     "submitSuccess": "Mensagem enviada com sucesso!",
-    "submitError": "Falha ao enviar mensagem. Por favor, tente novamente mais tarde.",
+    "submitError": "Falha ao enviar mensagem. Por favor, verifique os campos e tente novamente.",
+    "submitEmpty": "Preencha todos os campos.",
     "submitLoading": "Enviando mensagem..."
   }
 }

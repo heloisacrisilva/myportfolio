@@ -12,7 +12,7 @@ interface ContactForm {
 export const ContactForm = ({ lang }: ContactForm) => {
   const t = getTranslation(lang, 'contactSection');
   const [form, setForm] = useState({ name: '', email: '', message: '', subject: '' });
-  const [status, setStatus] = useState<'idle' | 'success' | 'loading' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'success' | 'loading' | 'error' | 'empty'>('idle');
   const [state, handleSubmitForm] = useForm(process.env.NEXT_PUBLIC_FORM_ID || '');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,6 +21,13 @@ export const ContactForm = ({ lang }: ContactForm) => {
 
   const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setStatus('loading');
+
+    if (!form.name.trim() || !form.email.trim() || !form.subject.trim() || !form.message.trim()) {
+      setStatus('empty');
+      return;
+    }
 
     setStatus('loading');
 
@@ -100,6 +107,7 @@ export const ContactForm = ({ lang }: ContactForm) => {
 
       {status === 'success' && <span style={{ color: 'green', marginTop: '1rem' }}>{t('submitSuccess')}</span>}
       {status === 'error' && <span style={{ color: 'red', marginTop: '1rem' }}>{t('submitError')}</span>}
+      {status === 'empty' && <span style={{ color: 'red', marginTop: '1rem' }}>{t('submitEmpty')}</span>}
     </S.Form>
   );
 };
