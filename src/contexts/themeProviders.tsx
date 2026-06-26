@@ -18,7 +18,7 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProviderContext = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState<DefaultTheme>(themes.darkTheme);
+  const [theme, setTheme] = useState<DefaultTheme>(themes.lightTheme);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');

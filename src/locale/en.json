@@ -3,60 +3,74 @@
     "title": "Welcome"
   },
   "header": {
+    "name": "Portfolio",
     "owner": "Heloísa Silva",
     "about": "About",
     "stack": "Stack",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "footer": {
-    "backToTop": "Back to Top"
+    "backToTop": "Back to Top",
+    "copyright": "© 2026 Full Stack Developer. Built with Precision."
+  },
+  "heroSection": {
+    "badge": "FOCUS ON LEARNING",
+    "title": "Heloísa Cristovão da Silva",
+    "subtitle": "Junior Full Stack Developer",
+    "description": "Developer in career transition, focused on building functional and efficient web applications. I seek to apply my technical knowledge to solve real problems objectively.",
+    "projectsBtn": "View Projects",
+    "talkBtn": "Let's Talk"
   },
   "aboutSection": {
-    "title": "About me",
-    "subtitle": "Technology Analyst | Junior Developer",
-    "description": "With nearly 6 years of professional experience, I blend analytical rigor from my administrative background with the agility of Software Engineering.\n My current focus is on Front-end development using TypeScript and Next.js, alongside UI/UX design in Figma and GCP infrastructure. I am currently expanding into Back-end development, aiming to master efficient API creation and scalable systems with Java."
+    "title": "About Me",
+    "description": "With nearly six years of professional experience, I combine the analytical rigor of my administrative background with the agility of software engineering. My goal is to deliver clean code and solutions that meet user needs.\n\nI currently focus on full-stack development, striving to learn and grow continuously with every project.",
+    "experienceCount": "5+",
+    "experienceText": "Years of Professional Experience.",
+    "experienceCountDev": "1+",
+    "experienceTextDev": "Years of Development Experience.",
+    "growthCount": "∞",
+    "growthText": "Desire for Growth",
+    "commitmentCount": "100%",
+    "commitmentText": "Commitment"
   },
   "stackSection": {
-    "title": "Technologies & Tools",
-    "subtitle": "My toolbox is carefully selected to ensure performance and scalability.",
+    "title": "My Tech Stack",
+    "subtitle": "Tools and technologies I use to transform ideas into digital reality.",
     "titleNext": "Next.js",
     "titleTypeScript": "TypeScript",
+    "titleGolang": "Golang",
     "titleNodejs": "Node.js",
-    "titleJava": "Java",
-    "titleFigma": "Figma",
     "titleGCP": "GCP",
     "titlePostgreSQL": "PostgreSQL",
-    "titleGIT": "GIT",
-    "desc_next": "Framework for building React web applications",
-    "desc_ts": "Superset of JavaScript with static typing",
-    "desc_nodejs": "JavaScript runtime environment on the server side",
-    "desc_java": "Object-oriented programming language",
-    "desc_figma": "Design and prototyping tool",
-    "desc_gcp": "Google's cloud platform",
-    "desc_postgresql": "Relational database management system",
-    "desc_git": "Distributed version control system",
-    "learning": "Learning"
+    "titleFigma": "Figma",
+    "titleJava": "Java",
+    "titleAIAgents": "AI Agents",
+    "learning": "IN PROGRESS"
   },
   "projectsSection": {
-    "title": "Projects",
-    "subtitle": "Under construction...",
-    "gitHub": "View on GitHub"
+    "title": "Featured Projects",
+    "cardTitle": "Projects Under Development",
+    "cardDescription": "I am working on new projects to demonstrate my technical skills. Soon, this section will be updated with detailed case studies."
   },
   "contactSection": {
-    "title": "Feel free to get in touch!",
-    "name": "Name",
-    "email": "Email",
-    "subject": "Subject",
-    "message": "Message",
-    "submit": "Submit",
-    "namePlaceholder": "Enter your name",
-    "emailPlaceholder": "Enter your email",
-    "subjectPlaceholder": "Enter the subject",
-    "messagePlaceholder": "Enter your message",
+    "title": "Let's build something amazing?",
+    "description": "I am looking for new challenges and opportunities. If you have a project or a vacancy that aligns with my profile, get in touch.",
+    "emailLabel": "EMAIL",
+    "emailValue": "heloisacristovao02@gmail.com",
+    "locationLabel": "LOCATION",
+    "locationValue": "Brazil / Remote",
+    "formName": "NAME",
+    "formEmail": "EMAIL",
+    "formMessage": "MESSAGE",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your.email@example.com",
+    "messagePlaceholder": "How can I help you?",
+    "submit": "Send Message",
     "submitSuccess": "Message sent successfully!",
     "submitError": "Failed to send message. Please verify fields and try again.",
-    "submitEmpty": "Fill in all the fields.",
-    "submitLoading": "Sending message..."
+    "submitEmpty": "Please fill in all fields.",
+    "submitLoading": "Sending..."
   }
 }
