@@ -19,7 +19,7 @@ export const Container = styled.header`
 `;
 
 export const Nav = styled.nav`
-  color: ${({ theme }) => theme.commonColors.pink};
+  color: ${({ theme }) => theme.commonColors.lilac};
   font-weight: ${({ theme }) => theme.fonts.helveticaBold};
 `;
 
@@ -33,7 +33,7 @@ export const Sections = styled.div`
 
 export const SectionsItem = styled.div<{ $active?: boolean }>`
   cursor: pointer;
-  color: ${({ theme, $active }) => ($active ? theme.commonColors.pink : theme.commonColors.lightZinc)};
+  color: ${({ theme, $active }) => ($active ? theme.commonColors.lilac : theme.commonColors.darkPurple)};
   font-weight: ${({ theme, $active }) => ($active ? theme.fonts.helveticaBold : theme.fonts.helveticaMedium)};
 
   text-decoration: ${({ $active }) => ($active ? 'underline' : 'none')};
@@ -41,7 +41,7 @@ export const SectionsItem = styled.div<{ $active?: boolean }>`
   text-underline-offset: ${({ $active }) => ($active ? '6px' : '0')};
 
   &:hover {
-    color: ${({ theme }) => theme.commonColors.pink};
+    color: ${({ theme }) => theme.commonColors.lilac};
   }
 `;
 

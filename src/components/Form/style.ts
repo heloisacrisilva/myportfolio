@@ -93,7 +93,7 @@ export const Button = styled.button`
   border-radius: 0.5rem;
   font-size: ${({ theme }) => theme.fonts.sizer.md};
   border: none;
-  background: ${({ theme }) => theme.commonColors.pink};
+  background: ${({ theme }) => theme.commonColors.lilac};
   color: ${({ theme }) => theme.commonColors.second};
   font-weight: bold;
   cursor: pointer;
@@ -101,6 +101,6 @@ export const Button = styled.button`
   margin-top: 1rem;
   &:hover {
     background: ${({ theme }) => theme.commonColors.lightPink};
-    color: ${({ theme }) => theme.commonColors.pink};
+    color: ${({ theme }) => theme.commonColors.lilac};
   }
 `;

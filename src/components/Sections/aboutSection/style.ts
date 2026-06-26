@@ -26,7 +26,7 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.primaryColor};
   margin-bottom: 1rem;
 
-  background-image: linear-gradient(to right, ${({ theme }) => theme.commonColors.pink} 50%, transparent 50%);
+  background-image: linear-gradient(to right, ${({ theme }) => theme.commonColors.lilac} 50%, transparent 50%);
   background-repeat: no-repeat;
   background-size: 100% 0.3rem;
   background-position: 0 112%;
@@ -79,5 +79,5 @@ export const SubtitleBox = styled.div`
 
 export const Subtitle = styled.h2`
   font-size: ${({ theme }) => theme.fonts.sizer.sm};
-  color: ${({ theme }) => theme.commonColors.pink};
+  color: ${({ theme }) => theme.commonColors.lilac};
 `;

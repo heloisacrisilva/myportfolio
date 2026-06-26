@@ -23,7 +23,7 @@ export const Links = styled.div`
 `;
 
 export const LinkIcon = styled.a`
-  color: ${({ theme }) => theme.commonColors.pink};
+  color: ${({ theme }) => theme.commonColors.lilac};
   font-size: 2rem;
   transition: color 0.2s;
   &:hover {
@@ -32,7 +32,7 @@ export const LinkIcon = styled.a`
 `;
 
 export const BackToTop = styled.button`
-  background: ${({ theme }) => theme.commonColors.pink};
+  background: ${({ theme }) => theme.commonColors.lilac};
   color: ${({ theme }) => theme.secondaryBackground};
   border: none;
   border-radius: 2rem;

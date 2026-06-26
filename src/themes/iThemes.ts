@@ -43,8 +43,9 @@ export interface iCommonTheme {
     lightZinc: string;
     darkZinc: string;
     darkZinc25: string;
+    darkPurple: string;
 
-    pink: string;
+    lilac: string;
     lightPink: string;
     neutral: string;
 

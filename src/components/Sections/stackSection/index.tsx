@@ -19,44 +19,44 @@ export const StackSection = ({ lang }: StackSectionProps) => {
     {
       title: t('titleNext'),
       description: t('desc_next'),
-      icon: <RiNextjsLine size={24} color={theme.theme.commonColors.pink} />,
+      icon: <RiNextjsLine size={24} color={theme.theme.commonColors.lilac} />,
     },
     {
       title: t('titleTypeScript'),
       description: t('desc_ts'),
-      icon: <RiJavascriptFill size={24} color={theme.theme.commonColors.pink} />,
+      icon: <RiJavascriptFill size={24} color={theme.theme.commonColors.lilac} />,
     },
     {
       title: t('titleNodejs'),
       description: t('desc_nodejs'),
-      icon: <SiNodedotjs size={24} color={theme.theme.commonColors.pink} />,
+      icon: <SiNodedotjs size={24} color={theme.theme.commonColors.lilac} />,
     },
     {
       title: t('titleJava'),
       description: t('desc_java'),
-      icon: <RiJavaFill size={24} color={theme.theme.commonColors.pink} />,
+      icon: <RiJavaFill size={24} color={theme.theme.commonColors.lilac} />,
       learning: true,
       t: t('learning') 
     },
     {
       title: t('titleFigma'),
       description: t('desc_figma'),
-      icon: <SiFigma size={24} color={theme.theme.commonColors.pink} />,
+      icon: <SiFigma size={24} color={theme.theme.commonColors.lilac} />,
     },
     {
       title: t('titleGCP'),
       description: t('desc_gcp'),
-      icon: <SiGooglecloud size={24} color={theme.theme.commonColors.pink} />,
+      icon: <SiGooglecloud size={24} color={theme.theme.commonColors.lilac} />,
     },
     {
       title: t('titlePostgreSQL'),
       description: t('desc_postgresql'),
-      icon: <SiPostgresql size={24} color={theme.theme.commonColors.pink} />,
+      icon: <SiPostgresql size={24} color={theme.theme.commonColors.lilac} />,
     },
     {
       title: t('titleGIT'),
       description: t('desc_git'),
-      icon: <SiGit size={24} color={theme.theme.commonColors.pink} />,
+      icon: <SiGit size={24} color={theme.theme.commonColors.lilac} />,
     },
   ];
 

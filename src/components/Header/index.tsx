@@ -55,7 +55,7 @@ export const Header = ({ lang }: HeaderProps) => {
   return (
     <S.Container>
       <S.Nav>
-        <a>{t('owner')}</a>
+        <a>{t('name')}</a>
       </S.Nav>
 
       <S.Sections>
