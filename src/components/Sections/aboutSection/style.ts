@@ -1,83 +1,94 @@
 import styled from 'styled-components';
 
-export const Section = styled.div`
+export const Section = styled.section`
   width: 100%;
-  min-height: calc(100vh - 4rem);
-  padding: 4rem 4rem;
+  padding: 6rem 4rem;
   display: flex;
-  gap: 6rem;
+  background-color: #FFFFFF; /* Clean white background */
+  gap: 3rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
-    gap: 0;
+    padding: 4rem 2rem;
+    gap: 2rem;
   }
 `;
 
-export const TextBox = styled.div`
-  flex: 1;
+export const TitleBox = styled.div`
+  flex: 0.25;
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+
+  @media screen and (max-width: 1024px) {
+    flex: none;
+  }
+`;
+
+export const Title = styled.h2`
+  font-size: 2.25rem;
+  font-family: ${({ theme }) => theme.fonts.helveticaBold};
+  color: ${({ theme }) => theme.primaryColor};
+  margin: 0;
+  line-height: 1.2;
+`;
+
+export const ContentBox = styled.div`
+  flex: 1;
+`;
+
+export const Column = styled.div`
+  display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+`;
+
+export const Description = styled.p`
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4B5563;
+  font-family: ${({ theme }) => theme.fonts.helveticaMedium};
+  margin: 0;
+  white-space: pre-line;
+`;
+
+export const CardsContainer = styled.div`
+  display: flex;
   gap: 1rem;
 `;
 
-export const Title = styled.h1`
-  font-size: ${({ theme }) => theme.fonts.sizer.xxl};
-  color: ${({ theme }) => theme.primaryColor};
-  margin-bottom: 1rem;
-
-  background-image: linear-gradient(to right, ${({ theme }) => theme.commonColors.lilac} 50%, transparent 50%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.3rem;
-  background-position: 0 112%;
-
-  display: inline-block;
-  width: fit-content;
-
-  @media screen and (max-width: 768px) {
-    font-size: ${({ theme }) => theme.fonts.sizer.xl};
-  }
-`;
-
-export const Description = styled.span`
-  font-size: ${({ theme }) => theme.fonts.sizer.xl};
-  color: ${({ theme }) => theme.primaryColor};
-  display: inline-block;
-  white-space: pre-line;
-
-  @media screen and (max-width: 768px) {
-    font-size: ${({ theme }) => theme.fonts.sizer.lg};
-  }
-`;
-
-export const Image = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
-
-  @media screen and (max-width: 768px) {
-    width: 80%;
-  }
-`;
-
-export const ImageBox = styled.div`
-  flex: 0.7;
+export const StatCard = styled.div<{ $variant: 'lilac' | 'yellow' }>`
+  flex: 1;
+  padding: 1.25rem 1rem;
+  border-radius: 0.5rem;
   display: flex;
-  border-radius: 1rem;
-  align-items: center;
-  @media screen and (max-width: 768px) {
-    justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  min-height: 7.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  background-color: ${({ theme, $variant }) => 
+    $variant === 'lilac' ? theme.neutral7 : theme.neutral6};
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   }
 `;
 
-export const SubtitleBox = styled.div`
-  background-color: ${({ theme }) => theme.commonColors.lightPink};
-  width: fit-content;
-  padding: 0.5rem;
-  border-radius: 1rem;
+export const StatNumber = styled.span<{ $variant: 'lilac' | 'yellow' }>`
+  font-size: 1.5rem;
+  font-family: ${({ theme }) => theme.fonts.helveticaBold};
+  
+  color: ${({ theme, $variant }) => 
+    $variant === 'lilac' ? theme.commonColors.lilac : theme.neutral10};
 `;
 
-export const Subtitle = styled.h2`
-  font-size: ${({ theme }) => theme.fonts.sizer.sm};
-  color: ${({ theme }) => theme.commonColors.lilac};
+export const StatLabel = styled.span<{ $variant: 'lilac' | 'yellow' }>`
+  font-size: 0.725rem;
+  line-height: 1.4;
+  font-family: ${({ theme }) => theme.fonts.helveticaMedium};
+  
+  color: ${({ $variant }) => 
+    $variant === 'lilac' ? '#5B507A' : '#73520E'};
 `;

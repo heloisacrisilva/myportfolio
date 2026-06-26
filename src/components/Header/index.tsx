@@ -3,13 +3,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import * as S from './style';
 import { getTranslation } from '@/utils/i18n';
+import dynamic from 'next/dynamic';
+import ThemeSwitcher from '../Buttons/ThemeSwitcher';
 import LanguageButton from '../Buttons/LanguageButton';
 import CONSTANTS from '@/config/constants.mjs';
-import ThemeSwitcher from '../Buttons/ThemeSwitcher';
-import dynamic from 'next/dynamic';
 
-const ToScrool = dynamic(() => import('react-scroll').then((mod) => mod.Link), { ssr: false });
-
+const ToScroll = dynamic(() => import('react-scroll').then((mod) => mod.Link), { ssr: false });
 const { AVAILABLE_LOCALES } = CONSTANTS;
 
 interface HeaderProps {
@@ -19,10 +18,11 @@ interface HeaderProps {
 export const Header = ({ lang }: HeaderProps) => {
   const t = getTranslation(lang, 'header');
 
-  const [activeSection, setActiveSection] = useState('AboutSection');
+  const [activeSection, setActiveSection] = useState('HeroSection');
 
   const navItems = useMemo(
     () => [
+      { id: 'HeroSection', label: t('resume') },
       { id: 'AboutSection', label: t('about') },
       { id: 'StackSection', label: t('stack') },
       { id: 'ProjectsSection', label: t('projects') },
@@ -33,9 +33,15 @@ export const Header = ({ lang }: HeaderProps) => {
 
   useEffect(() => {
     const sections = navItems.map((item) => document.getElementById(item.id));
+    const heroSection = document.getElementById('HeroSection');
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
+
+      if (heroSection && scrollPosition < heroSection.offsetTop + heroSection.offsetHeight) {
+        setActiveSection('HeroSection');
+        return;
+      }
 
       sections.forEach((section, index) => {
         if (!section) return;
@@ -55,13 +61,13 @@ export const Header = ({ lang }: HeaderProps) => {
   return (
     <S.Container>
       <S.Nav>
-        <a>{t('name')}</a>
+        <S.Logo href="#HeroSection">{t('name')}</S.Logo>
       </S.Nav>
 
       <S.Sections>
         {navItems.map((item) => (
           <S.SectionsItem key={item.id} $active={activeSection === item.id}>
-            <ToScrool
+            <ToScroll
               to={item.id}
               spy={true}
               smooth={true}
@@ -69,12 +75,12 @@ export const Header = ({ lang }: HeaderProps) => {
               onSetActive={() => setActiveSection(item.id)}
               onClick={() => setActiveSection(item.id)}>
               {item.label}
-            </ToScrool>
+            </ToScroll>
           </S.SectionsItem>
         ))}
       </S.Sections>
 
-      <ThemeSwitcher />
+            <ThemeSwitcher />
 
       <S.LocaleBox>
         {AVAILABLE_LOCALES.map((locale) => (

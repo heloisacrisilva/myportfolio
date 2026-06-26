@@ -3,9 +3,9 @@
 import { getTranslation } from '@/utils/i18n';
 import * as S from './style';
 import StackCard from '@/components/Cards/StackCard';
-import { SiGooglecloud, SiNodedotjs, SiFigma, SiPostgresql, SiGit } from 'react-icons/si';
-import { RiJavaFill, RiJavascriptFill, RiNextjsLine } from 'react-icons/ri';
-import { useTheme } from '@/contexts/themeProviders';
+import { SiGooglecloud, SiFigma, SiPostgresql, SiNodedotjs } from 'react-icons/si';
+import { RiAiGenerate, RiJavaFill, RiNextjsLine } from 'react-icons/ri';
+import { FaCode } from 'react-icons/fa';
 
 interface StackSectionProps {
   lang: string;
@@ -13,50 +13,47 @@ interface StackSectionProps {
 
 export const StackSection = ({ lang }: StackSectionProps) => {
   const t = getTranslation(lang, 'stackSection');
-  const theme = useTheme();
 
   const stacks = [
     {
       title: t('titleNext'),
-      description: t('desc_next'),
-      icon: <RiNextjsLine size={24} color={theme.theme.commonColors.lilac} />,
+      icon: <RiNextjsLine />,
     },
     {
       title: t('titleTypeScript'),
-      description: t('desc_ts'),
-      icon: <RiJavascriptFill size={24} color={theme.theme.commonColors.lilac} />,
+      icon: <FaCode />,
+    },
+    {
+      title: t('titleGolang'),
+      icon: <FaCode />,
     },
     {
       title: t('titleNodejs'),
-      description: t('desc_nodejs'),
-      icon: <SiNodedotjs size={24} color={theme.theme.commonColors.lilac} />,
-    },
-    {
-      title: t('titleJava'),
-      description: t('desc_java'),
-      icon: <RiJavaFill size={24} color={theme.theme.commonColors.lilac} />,
-      learning: true,
-      t: t('learning') 
-    },
-    {
-      title: t('titleFigma'),
-      description: t('desc_figma'),
-      icon: <SiFigma size={24} color={theme.theme.commonColors.lilac} />,
+      icon: <SiNodedotjs />,
     },
     {
       title: t('titleGCP'),
-      description: t('desc_gcp'),
-      icon: <SiGooglecloud size={24} color={theme.theme.commonColors.lilac} />,
+      icon: <SiGooglecloud />,
     },
     {
       title: t('titlePostgreSQL'),
-      description: t('desc_postgresql'),
-      icon: <SiPostgresql size={24} color={theme.theme.commonColors.lilac} />,
+      icon: <SiPostgresql />,
     },
     {
-      title: t('titleGIT'),
-      description: t('desc_git'),
-      icon: <SiGit size={24} color={theme.theme.commonColors.lilac} />,
+      title: t('titleFigma'),
+      icon: <SiFigma />,
+    },
+    {
+      title: t('titleJava'),
+      icon: <RiJavaFill />,
+      learning: true,
+      t: t('learning'),
+    },
+    {
+      title: t('titleAIAgents'),
+      icon: <RiAiGenerate />,
+      learning: true,
+      t: t('learning'),
     },
   ];
 
@@ -68,7 +65,7 @@ export const StackSection = ({ lang }: StackSectionProps) => {
       </S.TextBox>
       <S.CardsBox>
         {stacks.map((stack) => (
-          <StackCard key={stack.title} title={stack.title} description={stack.description} icon={stack.icon} learning={stack.learning} t={stack.t} />
+          <StackCard key={stack.title} title={stack.title} icon={stack.icon} learning={stack.learning} t={stack.t} />
         ))}
       </S.CardsBox>
     </S.Section>

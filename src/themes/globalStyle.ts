@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'HelveticaBold';
-    src: url('/fonts/HelveticaBold.otf') format('opentype');
+    src: url('/fonts/Helvetica.otf') format('opentype');
   }
 
   @font-face {
@@ -37,11 +37,11 @@ export const GlobalStyle = createGlobalStyle`
 
   ::selection {
     background-color: ${({ theme }) => theme.neutral9};
-    color: ${({ theme }) => theme.primaryColor};;
+    color: ${({ theme }) => theme.primaryColor};
   }
 
   body {
-    color: ${({ theme }) => theme.secondaryColor};;
+    color: ${({ theme }) => theme.secondaryColor};
     background: ${({ theme }) => theme.secondaryBackground};
     font-family: HelveticaMedium, sans-serif;
   }

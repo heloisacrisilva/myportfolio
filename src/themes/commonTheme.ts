@@ -26,9 +26,9 @@ const commonTheme: iCommonTheme = {
     opacitybackground300: '#e91e62d9' /*pink with opacity 25%*/,
   },
   fonts: {
-    helveticaExtraBold: 'HelveticaNowforMonksExtraBold',
-    helveticaBold: 'HelveticaNowforMonksBold',
-    helveticaMedium: 'HelveticaNowforMonksMedium',
+    helveticaExtraBold: 'HelveticaExtraBold',
+    helveticaBold: 'HelveticaBold',
+    helveticaMedium: 'HelveticaMedium',
     sizer: {
       sm: '0.625rem',
       md: '0.75rem',
