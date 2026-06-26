@@ -6,11 +6,13 @@ export const Section = styled.section`
   background-color: #FFFFFF; /* Clean white background */
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 6rem;
+  height: 100dvh;
 
   @media screen and (max-width: 1024px) {
     padding: 4rem 2rem;
     gap: 2rem;
+    height: 100%;
   }
 `;
 

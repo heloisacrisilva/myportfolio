@@ -8,8 +8,8 @@ export const Section = styled.section`
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
+  height: 100dvh;
   
-  /* Soft glow backgrounds on the corners to match the image gradient */
   background: 
     radial-gradient(circle at 10% 20%, rgba(98, 89, 129, 0.07) 0%, transparent 45%),
     radial-gradient(circle at 90% 10%, rgba(250, 245, 217, 0.4) 0%, transparent 50%),
@@ -20,6 +20,7 @@ export const Section = styled.section`
     padding: 6rem 2rem 4rem 2rem;
     gap: 3rem;
     text-align: center;
+    height: 100%;
   }
 `;
 
@@ -49,7 +50,7 @@ export const Badge = styled.span`
 `;
 
 export const Title = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   color: ${({ theme }) => theme.primaryColor};
   line-height: 1.1;
@@ -61,7 +62,7 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   color: ${({ theme }) => theme.commonColors.lilac};
   margin: 0;
@@ -73,7 +74,7 @@ export const Subtitle = styled.h2`
 `;
 
 export const Description = styled.p`
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #4B5563;
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
@@ -172,7 +173,6 @@ export const ImageContainer = styled.div`
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   
-  /* Gradient background matching the profile background in the design */
   background: radial-gradient(circle at 30% 30%, #FAF5D9 0%, #D8B4FE 70%, #635985 100%);
   
   display: flex;

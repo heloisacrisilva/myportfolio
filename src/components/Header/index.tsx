@@ -80,7 +80,7 @@ export const Header = ({ lang }: HeaderProps) => {
         ))}
       </S.Sections>
 
-            <ThemeSwitcher />
+            {/* <ThemeSwitcher /> */}
 
       <S.LocaleBox>
         {AVAILABLE_LOCALES.map((locale) => (

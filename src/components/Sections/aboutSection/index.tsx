@@ -7,35 +7,38 @@ interface AboutSectionProps {
   lang: string;
 }
 
+const STAT_CARDS = [
+  { variant: 'lilac', countKey: 'experienceCount', textKey: 'experienceText' },
+  { variant: 'yellow', countKey: 'commitmentCount', textKey: 'commitmentText' },
+  { variant: 'lilac', countKey: 'experienceCountDev', textKey: 'experienceTextDev' },
+  { variant: 'yellow', countKey: 'growthCount', textKey: 'growthText' },
+] as const;
+
+const COLUMNS_COUNT = 1;
+
 export const AboutSection = ({ lang }: AboutSectionProps) => {
   const t = getTranslation(lang, 'aboutSection');
-  
-  const columns = [1];
 
   return (
     <S.Section id="AboutSection">
       <S.TitleBox>
         <S.Title>{t('title')}</S.Title>
       </S.TitleBox>
-      
+
       <S.ContentBox>
-          {columns.map((col) => (
-            <S.Column key={col}>
-              <S.Description>{t('description')}</S.Description>
-              
-              <S.CardsContainer>
-                <S.StatCard $variant="lilac">
-                  <S.StatNumber $variant="lilac">{t('experienceCount')}</S.StatNumber>
-                  <S.StatLabel $variant="lilac">{t('experienceText')}</S.StatLabel>
+        <S.Description>{t('description')}</S.Description>
+        <S.CardsContainer>
+          {Array.from({ length: COLUMNS_COUNT }, (_, i) => (
+            <S.Column key={i}>
+              {STAT_CARDS.map(({ variant, countKey, textKey }) => (
+                <S.StatCard key={variant} $variant={variant}>
+                  <S.StatNumber $variant={variant}>{t(countKey)}</S.StatNumber>
+                  <S.StatLabel $variant={variant}>{t(textKey)}</S.StatLabel>
                 </S.StatCard>
-                
-                <S.StatCard $variant="yellow">
-                  <S.StatNumber $variant="yellow">{t('commitmentCount')}</S.StatNumber>
-                  <S.StatLabel $variant="yellow">{t('commitmentText')}</S.StatLabel>
-                </S.StatCard>
-              </S.CardsContainer>
+              ))}
             </S.Column>
           ))}
+        </S.CardsContainer>
       </S.ContentBox>
     </S.Section>
   );

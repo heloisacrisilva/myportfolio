@@ -27,7 +27,7 @@ export const IconWrapper = styled.div`
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: #F1F0F5; /* Very soft grayish purple */
+  background-color: #F1F0F5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,8 +56,8 @@ export const LearningBadge = styled.span`
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-  background-color: #FAF5D9; /* Soft pastel yellow background */
-  color: #854D0E; /* Dark yellow/gold text */
+  background-color: #FAF5D9; 
+  color: #854D0E; 
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   font-size: 0.55rem;
   font-weight: bold;

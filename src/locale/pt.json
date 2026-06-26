@@ -5,35 +5,39 @@
   "header": {
     "name": "Portfolio",
     "owner": "Heloísa Silva",
-    "about": "About",
-    "stack": "Stack",
-    "projects": "Projects",
-    "contact": "Contact",
-    "resume": "Resume"
+    "about": "Sobre",
+    "stack": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "resume": "Resumo"
   },
   "footer": {
     "backToTop": "Voltar ao topo",
     "copyright": "© 2026 Full Stack Developer. Built with Precision."
   },
   "heroSection": {
-    "badge": "TRANSIÇÃO DE CARREIRA E ESTRATÉGIA",
+    "badge": "FOCO NO APRENDIZADO",
     "title": "Heloísa Cristovão da Silva",
     "subtitle": "Desenvolvedora Full Stack Jr",
-    "description": "Desenvolvedora em transição de carreira, focada em construir aplicações web funcionais e eficientes. Busco aplicar meus conhecimentos técnicos para resolver problemas reais de forma objetiva.",
+    "description": "Desenvolvedora em construção, focada em fazer aplicações web funcionais e eficientes. Busco aplicar meus conhecimentos técnicos para resolver problemas reais de forma objetiva.",
     "projectsBtn": "Ver Projetos",
     "talkBtn": "Vamos Conversar"
   },
   "aboutSection": {
     "title": "Sobre Mim",
-    "description": "Com experiência prévia nas áreas administrativa, estou migrando para o desenvolvimento de software. Meu objetivo é entregar código limpo e soluções que atendam às necessidades do usuário.\n\nAtualmente foco no desenvolvimento Full Stack, buscando aprender e evoluir constantemente em cada projeto.",
+    "description": "Com quase 6 anos de trajetória profissional, uno o rigor analítico da minha bagagem administrativa à agilidade da Engenharia de Software. Meu objetivo é entregar código limpo e soluções que atendam às necessidades do usuário.\n\nAtualmente foco no desenvolvimento Full Stack, buscando aprender e evoluir constantemente em cada projeto.",
     "experienceCount": "5+",
     "experienceText": "Anos de Experiência Profissional.",
+    "experienceCountDev": "1+",
+    "experienceTextDev": "Anos de Experiência Desenvolvimento.",
+    "growthCount": "∞",
+    "growthText": "Vontade de Crescimento",
     "commitmentCount": "100%",
     "commitmentText": "Comprometimento"
   },
   "stackSection": {
     "title": "Meu Tech Stack",
-    "subtitle": "Ferramentas e tecnologias que utilizo para transformar ideias em realidade digital.",
+    "subtitle": "Ferramentas e tecnologias que utilizo.",
     "titleNext": "Next.js",
     "titleTypeScript": "TypeScript",
     "titleGolang": "Golang",
