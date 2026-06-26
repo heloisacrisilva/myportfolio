@@ -7,7 +7,7 @@ export const Button = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   border: none;
   cursor: pointer;
@@ -17,6 +17,6 @@ export const Button = styled.div`
 
   &:hover {
     transform: scale(1.1);
-    color: ${({ theme }) => theme.commonColors.pink};
+    color: ${({ theme }) => theme.commonColors.lilac};
   }
 `;

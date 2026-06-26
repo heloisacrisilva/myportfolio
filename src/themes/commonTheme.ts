@@ -8,26 +8,27 @@ const commonTheme: iCommonTheme = {
     lightZinc: '#949494' /* lightZinc*/,
     darkZinc: '#1E1E1E' /* darkZinc*/,
     darkZinc25: '#1E1E1E25' /* darkZinc with opacity 25% */,
+    darkPurple: '#48454e'/* darkPurple*/,
 
-    pink: '#E91E63',
+    lilac: '#625981',
     lightPink: '#f4c5d0' ,
     neutral: '#8a7174' ,
 
     neutral25: '#00000025' /*Black opacity 25%*/,
 
-    primaryGradient: 'linear-gradient(90deg, #E91E63 0%, #c84c69 100%)',
+    primaryGradient: 'linear-gradient(90deg, #625981 0%, #c84c69 100%)',
     secondaryGradient: 'linear-gradient(90deg, #c84c69 0%, #8a7174 100%)',
 
     radialGradient: 'radial-gradient(60.26% 205.78% at 50% 50%, #E91E63 0%, #c84c69d8 70.16%, #8a7174 100%)',
 
     opacitybackground100: '#e91e6298' /*pink with opacity 40%*/,
-    opacitybackground200: '#e91e6244' /*pink with opacity 80%*/,
+    opacitybackground200: '#625981' /*lilac with opacity 80%*/,
     opacitybackground300: '#e91e62d9' /*pink with opacity 25%*/,
   },
   fonts: {
-    helveticaExtraBold: 'HelveticaNowforMonksExtraBold',
-    helveticaBold: 'HelveticaNowforMonksBold',
-    helveticaMedium: 'HelveticaNowforMonksMedium',
+    helveticaExtraBold: 'HelveticaExtraBold',
+    helveticaBold: 'HelveticaBold',
+    helveticaMedium: 'HelveticaMedium',
     sizer: {
       sm: '0.625rem',
       md: '0.75rem',

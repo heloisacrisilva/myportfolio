@@ -1,48 +1,60 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  width: 100vw;
-  padding: 1rem;
-  background: ${({ theme }) => theme.secondaryBackground};
+  width: 100%;
+  padding: 1rem 4rem;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 1rem;
-  border-top: 1px solid ${({ theme }) => theme.neutral8};
-  position: sticky;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  height: 5rem;
-`;
-
-export const Links = styled.div`
-  display: flex;
+  justify-content: space-between;
   gap: 2rem;
-  align-items: center;
-`;
+  position: fixed;
+  bottom: 0;
 
-export const LinkIcon = styled.a`
-  color: ${({ theme }) => theme.commonColors.pink};
-  font-size: 2rem;
-  transition: color 0.2s;
-  &:hover {
-    color: ${({ theme }) => theme.commonColors.lightPink};
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0.5rem 1.5rem;
+    gap: 0.5rem;
+    text-align: center;
   }
 `;
 
-export const BackToTop = styled.button`
-  background: ${({ theme }) => theme.commonColors.pink};
-  color: ${({ theme }) => theme.secondaryBackground};
-  border: none;
-  border-radius: 2rem;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
+export const Logo = styled.a`
+  color: ${({ theme }) => theme.commonColors.lilac};
+  font-family: ${({ theme }) => theme.fonts.helveticaBold};
+  font-size: 1.125rem;
+  text-decoration: none;
   cursor: pointer;
-  transition: 0.2s;
+`;
+
+export const Copyright = styled.span`
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-family: ${({ theme }) => theme.fonts.helveticaMedium};
+
+  @media screen and (max-width: 768px) {
+    order: 3;
+  }
+`;
+
+export const LinksList = styled.div`
+  display: flex;
+  gap: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    order: 2;
+  }
+`;
+
+export const LinkItem = styled.a`
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-family: ${({ theme }) => theme.fonts.helveticaMedium};
+  text-decoration: none;
+  transition: color 0.2s ease;
+
   &:hover {
-    background: ${({ theme }) => theme.primaryBackground};
-    color: ${({ theme }) => theme.secondaryColor};
+    color: ${({ theme }) => theme.commonColors.lilac};
   }
 `;

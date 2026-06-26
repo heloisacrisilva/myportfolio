@@ -3,62 +3,74 @@
     "title": "Bem-vinda"
   },
   "header": {
+    "name": "Portfolio",
     "owner": "Heloísa Silva",
     "about": "Sobre",
-    "stack": "Tecnologias",
+    "stack": "Habilidades",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "resume": "Resumo"
   },
   "footer": {
-    "backToTop": "Voltar ao topo"
+    "backToTop": "Voltar ao topo",
+    "copyright": "© 2026 Full Stack Developer. Built with Precision."
+  },
+  "heroSection": {
+    "badge": "FOCO NO APRENDIZADO",
+    "title": "Heloísa Cristovão da Silva",
+    "subtitle": "Desenvolvedora Full Stack Jr",
+    "description": "Desenvolvedora em construção, focada em fazer aplicações web funcionais e eficientes. Busco aplicar meus conhecimentos técnicos para resolver problemas reais de forma objetiva.",
+    "projectsBtn": "Ver Projetos",
+    "talkBtn": "Vamos Conversar"
   },
   "aboutSection": {
-    "title": "Sobre mim",
-    "subtitle": "Analista de TI | Desenvolvedora Júnior",
-    "description": "Com quase 6 anos de trajetória profissional, uno o rigor analítico da minha bagagem administrativa à agilidade da Engenharia de Software.\n Atualmente, foco no desenvolvimento Front-end com TypeScript e Next.js, além da prototipação no Figma e infraestrutura GCP. Expandindo minha atuação para o Back-end, busco dominar a criação de APIs eficientes e sistemas escaláveis com Java."
+    "title": "Sobre Mim",
+    "description": "Com quase 6 anos de trajetória profissional, uno o rigor analítico da minha bagagem administrativa à agilidade da Engenharia de Software. Meu objetivo é entregar código limpo e soluções que atendam às necessidades do usuário.\n\nAtualmente foco no desenvolvimento Full Stack, buscando aprender e evoluir constantemente em cada projeto.",
+    "experienceCount": "5+",
+    "experienceText": "Anos de Experiência Profissional.",
+    "experienceCountDev": "1+",
+    "experienceTextDev": "Anos de Experiência Desenvolvimento.",
+    "growthCount": "∞",
+    "growthText": "Vontade de Crescimento",
+    "commitmentCount": "100%",
+    "commitmentText": "Comprometimento"
   },
   "stackSection": {
-    "title": "Tecnologias & Ferramentas",
-    "subtitle": "Minha caixa de ferramentas é selecionada para garantir performance e escalabilidade.",
+    "title": "Meu Tech Stack",
+    "subtitle": "Ferramentas e tecnologias que utilizo.",
     "titleNext": "Next.js",
     "titleTypeScript": "TypeScript",
-    "titleFigma": "Figma",
-    "titleGCP": "GCP",
+    "titleGolang": "Golang",
     "titleNodejs": "Node.js",
-    "titleJava": "Java",
-    "titleSQL": "SQL",
+    "titleGCP": "GCP",
     "titlePostgreSQL": "PostgreSQL",
-    "titleGIT": "GIT",
-    "desc_next": "Framework para desenvolvimento de aplicações web React",
-    "desc_ts": "Superset do JavaScript com tipagem estática",
-    "desc_figma": "Ferramenta de design e prototipação",
-    "desc_gcp": "Plataforma de nuvem da Google",
-    "desc_nodejs": "Ambiente de execução JavaScript no lado do servidor",
-    "desc_java": "Linguagem de programação orientada a objetos",
-    "desc_sql": "Linguagem de consulta estruturada",
-    "desc_postgresql": "Sistema de gerenciamento de banco de dados relacional",
-    "desc_git": "Sistema de controle de versão distribuído",
-    "learning": "Aprendendo"
+    "titleFigma": "Figma",
+    "titleJava": "Java",
+    "titleAIAgents": "Agentes IA",
+    "learning": "EM ANDAMENTO"
   },
   "projectsSection": {
-    "title": "Projetos",
-    "subtitle": "Em construção...",
-    "gitHub": "Ver no GitHub"
+    "title": "Projetos em Destaque",
+    "cardTitle": "Projetos em Desenvolvimento",
+    "cardDescription": "Estou trabalhando em novos projetos para demonstrar minhas habilidades técnicas. Em breve, esta seção será atualizada com estudos de caso detalhados."
   },
   "contactSection": {
-    "title": "Fique à vontade para entrar em contato!",
-    "name": "Nome",
-    "email": "Email",
-    "subject": "Assunto",
-    "message": "Mensagem",
-    "submit": "Enviar",
-    "namePlaceholder": "Digite seu nome",
-    "emailPlaceholder": "Digite seu email",
-    "subjectPlaceholder": "Digite o assunto",
-    "messagePlaceholder": "Digite sua mensagem",
+    "title": "Vamos construir algo incrível?",
+    "description": "Estou em busca de novos desafios e oportunidades de aprendizado. Se você tem um projeto ou uma vaga que se alinhe ao meu perfil, entre em contato.",
+    "emailLabel": "EMAIL",
+    "emailValue": "heloisacristovao02@gmail.com",
+    "locationLabel": "LOCALIZAÇÃO",
+    "locationValue": "Brasil / Blumenau-SC",
+    "formName": "NOME",
+    "formEmail": "EMAIL",
+    "formMessage": "MENSAGEM",
+    "namePlaceholder": "Seu nome completo",
+    "emailPlaceholder": "seu.email@exemplo.com",
+    "messagePlaceholder": "Como posso ajudar você?",
+    "submit": "Enviar Mensagem",
     "submitSuccess": "Mensagem enviada com sucesso!",
     "submitError": "Falha ao enviar mensagem. Por favor, verifique os campos e tente novamente.",
     "submitEmpty": "Preencha todos os campos.",
-    "submitLoading": "Enviando mensagem..."
+    "submitLoading": "Enviando..."
   }
 }
