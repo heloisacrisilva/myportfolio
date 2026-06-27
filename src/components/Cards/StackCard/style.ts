@@ -15,7 +15,6 @@ export const CardContainer = styled.div`
   cursor: pointer;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  min-height: 10.5rem;
 
   &:hover {
     transform: translateY(-4px);

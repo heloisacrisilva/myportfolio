@@ -7,7 +7,7 @@ export const Section = styled.section`
   flex-direction: column;
   background-color: #ffffff;
   gap: 3rem;
-  height: 100dvh;
+  height: 100%;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -40,7 +40,7 @@ export const ContentBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;

@@ -9,7 +9,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  position: fixed;
+  /* position: fixed;÷ */
   bottom: 0;
 
   @media screen and (max-width: 768px) {
@@ -49,7 +49,7 @@ export const LinksList = styled.div`
 
 export const LinkItem = styled.a`
   font-size: 0.85rem;
-  color: #4b5563;
+  color: ${({ theme }) => theme.commonColors.lightZinc};
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   text-decoration: none;
   transition: color 0.2s ease;

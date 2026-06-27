@@ -4,7 +4,7 @@ export const Container = styled.header`
   width: 100%;
   height: 4.75rem;
   padding: 1rem 4rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 99;
@@ -14,7 +14,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  background: ${({ theme }) => theme.primaryBackground};
+  background: ${({ theme }) => theme.primaryBackground}10;
   backdrop-filter: blur(8px);
 
   @media screen and (max-width: 768px) {

@@ -8,7 +8,7 @@ export const Section = styled.section`
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  height: 100dvh;
+  /* height: 100%; */
   
   background: 
     radial-gradient(circle at 10% 20%, rgba(98, 89, 129, 0.07) 0%, transparent 45%),

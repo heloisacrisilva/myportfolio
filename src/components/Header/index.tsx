@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from 'react';
 import * as S from './style';
 import { getTranslation } from '@/utils/i18n';
 import dynamic from 'next/dynamic';
-import ThemeSwitcher from '../Buttons/ThemeSwitcher';
 import LanguageButton from '../Buttons/LanguageButton';
 import CONSTANTS from '@/config/constants.mjs';
 
