@@ -1,4 +1,5 @@
 export interface iTheme extends iCommonTheme {
+  isDark: boolean;
   primaryBackground: string;
   secondaryBackground: string;
 

@@ -17,6 +17,6 @@ export const Button = styled.div`
 
   &:hover {
     transform: scale(1.1);
-    color: ${({ theme }) => theme.commonColors.lilac};
+    color: ${({ theme }) => theme.neutral5};
   }
 `;

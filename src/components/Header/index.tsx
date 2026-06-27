@@ -6,6 +6,7 @@ import { getTranslation } from '@/utils/i18n';
 import dynamic from 'next/dynamic';
 import LanguageButton from '../Buttons/LanguageButton';
 import CONSTANTS from '@/config/constants.mjs';
+import ThemeSwitcher from '../Buttons/ThemeSwitcher';
 
 const ToScroll = dynamic(() => import('react-scroll').then((mod) => mod.Link), { ssr: false });
 const { AVAILABLE_LOCALES } = CONSTANTS;
@@ -79,7 +80,7 @@ export const Header = ({ lang }: HeaderProps) => {
         ))}
       </S.Sections>
 
-            {/* <ThemeSwitcher /> */}
+            <ThemeSwitcher />
 
       <S.LocaleBox>
         {AVAILABLE_LOCALES.map((locale) => (

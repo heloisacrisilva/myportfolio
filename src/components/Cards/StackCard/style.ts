@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  background-color: #FFFFFF;
-  border: 1px solid #ECEBEF;
+  background-color: ${({ theme }) => theme.primaryBackground};
+  border: 1px solid ${({ theme }) => theme.dayBorder};
   border-radius: 0.75rem;
   padding: 2rem 1.5rem;
   display: flex;
@@ -18,7 +18,7 @@ export const CardContainer = styled.div`
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px ${({ theme }) => theme.isDark ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.05)'};
   }
 `;
 
@@ -26,15 +26,15 @@ export const IconWrapper = styled.div`
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: #F1F0F5;
+  background-color: ${({ theme }) => theme.isDark ? '#2D2D30' : '#F1F0F5'};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #4B5563;
+  color: ${({ theme }) => theme.secondaryColor};
   transition: background-color 0.2s ease;
 
   ${CardContainer}:hover & {
-    background-color: #E2E1E9;
+    background-color: ${({ theme }) => theme.isDark ? '#3D3D42' : '#E2E1E9'};
   }
 
   svg {
@@ -55,8 +55,8 @@ export const LearningBadge = styled.span`
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-  background-color: #FAF5D9; 
-  color: #854D0E; 
+  background-color: ${({ theme }) => theme.isDark ? '#2D2514' : '#FAF5D9'}; 
+  color: ${({ theme }) => theme.isDark ? '#F59E0B' : '#854D0E'}; 
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   font-size: 0.55rem;
   font-weight: bold;

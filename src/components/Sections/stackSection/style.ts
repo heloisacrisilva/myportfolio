@@ -34,7 +34,7 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.p`
   font-size: 0.95rem;
-  color: #4B5563;
+  color: ${({ theme }) => theme.secondaryColor};
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   margin: 0;
   line-height: 1.5;

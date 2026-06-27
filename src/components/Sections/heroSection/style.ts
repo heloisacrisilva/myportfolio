@@ -8,12 +8,10 @@ export const Section = styled.section`
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  /* height: 100%; */
-  
-  background: 
+
+  background:
     radial-gradient(circle at 10% 20%, rgba(98, 89, 129, 0.07) 0%, transparent 45%),
-    radial-gradient(circle at 90% 10%, rgba(250, 245, 217, 0.4) 0%, transparent 50%),
-    ${({ theme }) => theme.secondaryBackground};
+    radial-gradient(circle at 90% 10%, rgba(250, 245, 217, 0.4) 0%, transparent 50%), ${({ theme }) => theme.secondaryBackground};
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -64,7 +62,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.h2`
   font-size: 2rem;
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
-  color: ${({ theme }) => theme.commonColors.lilac};
+  color: ${({ theme }) => theme.neutral5};
   margin: 0;
   line-height: 1.1;
 
@@ -76,7 +74,7 @@ export const Subtitle = styled.h2`
 export const Description = styled.p`
   font-size: 1rem;
   line-height: 1.6;
-  color: #4B5563;
+  color: ${({ theme }) => theme.primaryColor};
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   max-width: 36rem;
   margin: 0.5rem 0 1rem 0;
@@ -98,8 +96,8 @@ export const ButtonBox = styled.div`
 `;
 
 export const PrimaryButton = styled.button`
-  background-color: ${({ theme }) => theme.commonColors.lilac};
-  color: #FFFFFF;
+  background-color: ${({ theme }) => theme.neutral5};
+  color:${({ theme }) => theme.neutral3};
   border: none;
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   font-size: 0.95rem;
@@ -113,7 +111,8 @@ export const PrimaryButton = styled.button`
   box-shadow: 0 4px 6px -1px rgba(98, 89, 129, 0.2);
 
   &:hover {
-    background-color: #52486E;
+    background-color: ${({ theme }) => theme.isDark ? '#a79cd4' : '#52486E'};
+    color: ${({ theme }) => theme.isDark ? '#1E1E1E' : '#FFFFFF'};
     transform: translateY(-2px);
   }
 
@@ -127,9 +126,9 @@ export const PrimaryButton = styled.button`
 `;
 
 export const SecondaryButton = styled.button`
-  background-color: #FFFFFF;
-  color: ${({ theme }) => theme.commonColors.lilac};
-  border: 1.5px solid ${({ theme }) => theme.commonColors.lilac};
+  background-color:  ${({ theme }) => theme.neutral3};
+  color: ${({ theme }) => theme.neutral5};
+  border: 1.5px solid  ${({ theme }) => theme.neutral5};
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   font-size: 0.95rem;
   padding: 0.85rem 1.75rem;
@@ -138,10 +137,13 @@ export const SecondaryButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
-    background-color: ${({ theme }) => theme.commonColors.lilac}08;
+    background-color:  ${({ theme }) => theme.neutral5}08;
     transform: translateY(-2px);
   }
 
@@ -169,12 +171,12 @@ export const ImageContainer = styled.div`
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
-  border: 8px solid #FFFFFF;
+  border: 8px solid ${({ theme }) => theme.dayBorder};
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  
-  background: radial-gradient(circle at 30% 30%, #FAF5D9 0%, #D8B4FE 70%, #635985 100%);
-  
+
+  background: radial-gradient(circle at 30% 30%, #faf5d9 0%, #d8b4fe 70%, #635985 100%);
+
   display: flex;
   justify-content: center;
   align-items: center;
