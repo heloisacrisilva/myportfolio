@@ -12,6 +12,7 @@
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@phosphor-icons/react": "^2.1.10",
+    "@vercel/analytics": "^2.0.1",
     "babel-plugin-styled-components": "^2.1.4",
     "next": "^14.2.35",
     "next-intl": "^4.8.3",
