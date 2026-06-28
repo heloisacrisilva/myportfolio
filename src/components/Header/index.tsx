@@ -26,6 +26,7 @@ export const Header = ({ lang }: HeaderProps) => {
       { id: 'AboutSection', label: t('about') },
       { id: 'StackSection', label: t('stack') },
       { id: 'ProjectsSection', label: t('projects') },
+      { id: 'CertificatesSection', label: t('certificates') },
       { id: 'ContactSection', label: t('contact') },
     ],
     [t]

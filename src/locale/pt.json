@@ -9,6 +9,7 @@
     "stack": "Habilidades",
     "projects": "Projetos",
     "contact": "Contato",
+    "certificates": "Certificações",
     "resume": "Resumo"
   },
   "footer": {
@@ -72,5 +73,18 @@
     "submitError": "Falha ao enviar mensagem. Por favor, verifique os campos e tente novamente.",
     "submitEmpty": "Preencha todos os campos.",
     "submitLoading": "Enviando..."
+  },
+  "certificatesSection": {
+    "title": "Certificações",
+    "progress": "Em progresso",
+    "cert1Title": "TECNÓLOGO EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS",
+    "cert2Title": "FORMAÇÃO ADA'S DEV - FULL STACK JAVA",
+    "cert3Title": "COMUNICAÇÃO E ORATÓRIA",
+    "cert4Title": "NETWORKING ESSENTIALS 1.0",
+    "cert5Title": "AWS ACADEMY CLOUD FOUNDATION",
+    "cert6Title": "IMERSÃO FRONT-END",
+    "cert7Title": "DATABASE FOUNDATIONS",
+    "cert8Title": "APLICAÇÃO COMPLETA EM GOLANG",
+    "cert9Title": "INGLÊS BÁSICO"
   }
 }
