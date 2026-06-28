@@ -9,7 +9,7 @@
     "stack": "Stack",
     "projects": "Projects",
     "contact": "Contact",
-    "certificates": "Certificates",
+    "certificates": "Certifications",
     "resume": "Resume"
   },
   "footer": {
@@ -75,6 +75,7 @@
     "submitLoading": "Sending..."
   },
   "certificatesSection": {
+    "title": "Certifications",
     "cert1Title": "TECHNOLOGIST IN SYSTEMS ANALYSIS AND DEVELOPMENT",
     "cert2Title": "ADA'S DEV TRAINING - FULL STACK JAVA",
     "cert3Title": "COMMUNICATION AND PUBLIC SPEAKING",
