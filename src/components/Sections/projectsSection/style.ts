@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Section = styled.section`
   width: 100%;
   padding: 6rem 4rem;
-  background-color: #FFFFFF; /* Clean white background */
+  background-color: ${({ theme }) => theme.primaryBackground};
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  height: 100dvh;
+  height: 100%;
 
   @media screen and (max-width: 1024px) {
     padding: 4rem 2rem;
@@ -26,7 +26,7 @@ export const Title = styled.h2`
 
 export const PlaceholderCard = styled.div`
   width: 100%;
-  border: 2px dashed #ECEBEF;
+  border: 2px dashed ${({ theme }) => theme.dayBorder};
   border-radius: 1rem;
   padding: 6rem 2rem;
   display: flex;
@@ -35,7 +35,7 @@ export const PlaceholderCard = styled.div`
   justify-content: center;
   text-align: center;
   gap: 1rem;
-  background-color: #FFFFFF;
+  background-color: ${({ theme }) => theme.isDark ? '#1E1E1E' : '#FFFFFF'};
   transition: border-color 0.2s ease;
 
   &:hover {
@@ -67,7 +67,7 @@ export const CardTitle = styled.h3`
 export const CardDescription = styled.p`
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #6B7280;
+  color: ${({ theme }) => theme.secondaryColor};
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   max-width: 28rem;
   margin: 0;

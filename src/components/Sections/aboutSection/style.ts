@@ -5,9 +5,9 @@ export const Section = styled.section`
   padding: 6rem 4rem;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.primaryBackground};
   gap: 3rem;
-  height: 100dvh;
+  height: 100%;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -40,7 +40,7 @@ export const ContentBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -56,7 +56,7 @@ export const Column = styled.div`
 export const Description = styled.p`
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: ${({ theme }) => theme.secondaryColor};
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   margin: 0;
   white-space: pre-line;
@@ -90,7 +90,7 @@ export const StatCard = styled.div<{ $variant: 'lilac' | 'yellow' }>`
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px ${({ theme }) => theme.isDark ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.05)'};
   }
 `;
 
@@ -106,5 +106,5 @@ export const StatLabel = styled.span<{ $variant: 'lilac' | 'yellow' }>`
   line-height: 1.4;
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
 
-  color: ${({ $variant }) => ($variant === 'lilac' ? '#5B507A' : '#73520E')};
+  color: ${({ theme, $variant }) => ($variant === 'lilac' ? (theme.isDark ? '#baaee4' : '#5B507A') : (theme.isDark ? '#F59E0B' : '#73520E'))};
 `;

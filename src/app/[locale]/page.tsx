@@ -8,6 +8,7 @@ import { ProjectsSection } from '@/components/Sections/projectsSection';
 import { ContactSection } from '@/components/Sections/contactSection';
 import { Footer } from '@/components/Footer';
 import * as S from './style';
+import { CetificatesSection } from '@/components/Sections/certificatesSection';
 
 export default function Home({ params }: { params: { locale: string } }) {
   const { locale: lang } = params;
@@ -20,6 +21,7 @@ export default function Home({ params }: { params: { locale: string } }) {
         <AboutSection lang={lang} />
         <StackSection lang={lang} />
         <ProjectsSection lang={lang} />
+        <CetificatesSection lang={lang}/>
         <ContactSection lang={lang} />
         <Footer lang={lang} />
       </S.Container>

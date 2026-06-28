@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  background-color: #FFFFFF;
+  background-color: ${({ theme }) => theme.primaryBackground};
   border-radius: 1.5rem;
   padding: 4rem;
   display: flex;
@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
   width: 100%;
   max-width: 68rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02), 0 4px 6px -2px rgba(0, 0, 0, 0.01);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  border: 1px solid ${({ theme }) => theme.dayBorder};
 
   @media screen and (max-width: 968px) {
     flex-direction: column;
@@ -46,7 +46,7 @@ export const Title = styled.h2`
 export const Description = styled.p`
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #4B5563;
+  color: ${({ theme }) => theme.secondaryColor};
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   margin: 0;
 `;
@@ -68,7 +68,7 @@ export const IconWrapper = styled.div`
   width: 3.25rem;
   height: 3.25rem;
   border-radius: 50%;
-  background-color: #F1F0F5; /* Very soft grayish purple */
+  background-color: ${({ theme }) => theme.isDark ? '#2D2D30' : '#F1F0F5'}; /* Very soft grayish purple */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +145,7 @@ export const Label = styled.label`
   font-size: 0.65rem;
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   font-weight: bold;
-  color: #374151;
+  color: ${({ theme }) => theme.isDark ? '#E5E7EB' : '#374151'};
   text-transform: uppercase;
   letter-spacing: 0.05em;
 `;
@@ -154,11 +154,11 @@ export const Input = styled.input`
   width: 100%;
   padding: 0.85rem 1rem;
   border-radius: 0.5rem;
-  border: 1.5px solid #ECEBEF;
+  border: 1.5px solid ${({ theme }) => theme.dayBorder};
   font-size: 0.95rem;
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   color: ${({ theme }) => theme.primaryColor};
-  background-color: #FFFFFF;
+  background-color: ${({ theme }) => theme.isDark ? '#121212' : '#FFFFFF'};
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
   &::placeholder {
@@ -177,11 +177,11 @@ export const TextArea = styled.textarea`
   width: 100%;
   padding: 0.85rem 1rem;
   border-radius: 0.5rem;
-  border: 1.5px solid #ECEBEF;
+  border: 1.5px solid ${({ theme }) => theme.dayBorder};
   font-size: 0.95rem;
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   color: ${({ theme }) => theme.primaryColor};
-  background-color: #FFFFFF;
+  background-color: ${({ theme }) => theme.isDark ? '#121212' : '#FFFFFF'};
   resize: vertical;
   min-height: 8rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -205,15 +205,15 @@ export const SubmitButton = styled.button`
   font-size: 0.95rem;
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   border: none;
-  background: ${({ theme }) => theme.commonColors.lilac};
-  color: #FFFFFF;
+  background: ${({ theme }) => theme.neutral5};
+  color: ${({ theme }) => theme.isDark ? '#1E1E1E' : '#FFFFFF'};
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
   margin-top: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(98, 89, 129, 0.15);
 
   &:hover {
-    background-color: #52486E;
+    background-color: ${({ theme }) => theme.isDark ? '#a79cd4' : '#52486E'};
   }
 
   &:active {

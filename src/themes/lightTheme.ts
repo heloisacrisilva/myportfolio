@@ -4,6 +4,8 @@ import { iTheme } from './iThemes';
 const theme: iTheme = {
   ...commonTheme,
 
+  isDark: false,
+
   primaryBackground: '#FFFFFF' /* White for cards */,
   secondaryBackground: '#FAF9F6' /* Very soft off-white/cream page background */,
 

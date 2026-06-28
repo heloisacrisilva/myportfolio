@@ -4,17 +4,17 @@ export const Container = styled.header`
   width: 100%;
   height: 4.75rem;
   padding: 1rem 4rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 99;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid ${({ theme }) => theme.dayBorder};
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background: ${({ theme }) => theme.primaryBackground};
+  background: ${({ theme }) => theme.primaryBackground}10;
   backdrop-filter: blur(8px);
 
   @media screen and (max-width: 768px) {
@@ -28,7 +28,7 @@ export const Nav = styled.nav`
 `;
 
 export const Logo = styled.a`
-  color: ${({ theme }) => theme.commonColors.lilac};
+  color: ${({ theme }) => theme.neutral5};
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   font-size: 1.25rem;
   cursor: pointer;
@@ -49,7 +49,7 @@ export const Sections = styled.div`
 
 export const SectionsItem = styled.div<{ $active?: boolean }>`
   cursor: pointer;
-  color: ${({ theme, $active }) => ($active ? theme.commonColors.lilac : theme.secondaryColor)};
+  color: ${({ theme, $active }) => ($active ? theme.neutral5 : theme.secondaryColor)};
   font-family: ${({ theme, $active }) => ($active ? theme.fonts.helveticaBold : theme.fonts.helveticaMedium)};
   font-size: 0.9rem;
   position: relative;
@@ -62,13 +62,13 @@ export const SectionsItem = styled.div<{ $active?: boolean }>`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: ${({ theme }) => theme.commonColors.lilac};
+    background-color: ${({ theme }) =>  theme.neutral5};
     transform: scaleX(${({ $active }) => ($active ? 1 : 0)});
     transition: transform 0.2s ease;
   }
 
   &:hover {
-    color: ${({ theme }) => theme.commonColors.lilac};
+    color: ${({ theme }) => theme.neutral5};
     &::after {
       transform: scaleX(1);
     }
