@@ -3,9 +3,9 @@
 import { getTranslation } from '@/utils/i18n';
 import * as S from './style';
 import StackCard from '@/components/Cards/StackCard';
-import { SiGooglecloud, SiFigma, SiPostgresql, SiNodedotjs } from 'react-icons/si';
+import { SiGooglecloud, SiFigma, SiPostgresql, SiNodedotjs, SiTypescript } from 'react-icons/si';
 import { RiAiGenerate, RiJavaFill, RiNextjsLine } from 'react-icons/ri';
-import { FaCode } from 'react-icons/fa';
+import { FaGolang } from 'react-icons/fa6';
 
 interface StackSectionProps {
   lang: string;
@@ -21,11 +21,11 @@ export const StackSection = ({ lang }: StackSectionProps) => {
     },
     {
       title: t('titleTypeScript'),
-      icon: <FaCode />,
+      icon: <SiTypescript />,
     },
     {
       title: t('titleGolang'),
-      icon: <FaCode />,
+      icon: <FaGolang />,
     },
     {
       title: t('titleNodejs'),

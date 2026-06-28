@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Section = styled.section`
   width: 100%;
   padding: 6rem 4rem;
-  background-color: ${({ theme }) => theme.secondaryBackground}; /* Soft off-white */
+  background-color: ${({ theme }) => theme.secondaryBackground};
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
 
   @media screen and (max-width: 1024px) {
@@ -25,7 +25,6 @@ export const TextBox = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 2.25rem;
   font-family: ${({ theme }) => theme.fonts.helveticaBold};
   color: ${({ theme }) => theme.primaryColor};
   margin: 0;
@@ -33,7 +32,6 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 0.95rem;
   color: ${({ theme }) => theme.secondaryColor};
   font-family: ${({ theme }) => theme.fonts.helveticaMedium};
   margin: 0;

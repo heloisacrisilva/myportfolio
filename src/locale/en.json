@@ -9,6 +9,7 @@
     "stack": "Stack",
     "projects": "Projects",
     "contact": "Contact",
+    "certificates": "Certifications",
     "resume": "Resume"
   },
   "footer": {
@@ -72,5 +73,17 @@
     "submitError": "Failed to send message. Please verify fields and try again.",
     "submitEmpty": "Please fill in all fields.",
     "submitLoading": "Sending..."
+  },
+  "certificatesSection": {
+    "title": "Certifications",
+    "cert1Title": "TECHNOLOGIST IN SYSTEMS ANALYSIS AND DEVELOPMENT",
+    "cert2Title": "ADA'S DEV TRAINING - FULL STACK JAVA",
+    "cert3Title": "COMMUNICATION AND PUBLIC SPEAKING",
+    "cert4Title": "NETWORKING ESSENTIALS 1.0",
+    "cert5Title": "AWS ACADEMY CLOUD FOUNDATION",
+    "cert6Title": "FRONT-END IMMERSION",
+    "cert7Title": "DATABASE FOUNDATIONS",
+    "cert8Title": "COMPLETE APPLICATION IN GOLANG",
+    "cert9Title": "BASIC ENGLISH"
   }
 }

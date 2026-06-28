@@ -5,7 +5,7 @@ export const Section = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   padding: 6rem 4rem;
   background-color: ${({ theme }) => theme.neutral8};
 
