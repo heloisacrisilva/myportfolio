@@ -7,20 +7,23 @@ interface CertificatesCardProps {
   institute?: string;
   icon?: React.ReactNode;
   progress?: boolean;
+  link?: string;
   t?: string;
 }
 
-const CertificatesCard = ({ title, icon, progress, institute, t }: CertificatesCardProps) => {
+const CertificatesCard = ({ title, icon, progress, link, institute, t }: CertificatesCardProps) => {
   return (
     <S.CardContainer>
-      {progress && <S.LearningBadge>{t || 'Progress'}</S.LearningBadge>}
+      <a target='_blank' href={link}>
+        {progress && <S.LearningBadge>{t || 'Progress'}</S.LearningBadge>}
 
-      <S.IconWrapper>{icon}</S.IconWrapper>
+        <S.IconWrapper>{icon}</S.IconWrapper>
 
-      <S.TitlesBox>
-        <S.CardTitle>{title}</S.CardTitle>
-        <S.CardSubtitle>{institute}</S.CardSubtitle>
-      </S.TitlesBox>
+        <S.TitlesBox>
+          <S.CardTitle>{title}</S.CardTitle>
+          <S.CardSubtitle>{institute}</S.CardSubtitle>
+        </S.TitlesBox>
+      </a>
     </S.CardContainer>
   );
 };

@@ -7,7 +7,7 @@ export const Section = styled.section`
   width: 100%;
   height: 100%;
   padding: 6rem 4rem;
-  background-color: ${({ theme }) => theme.neutral8};
+  background-color: ${({ theme }) => theme.neutral3};
 
   @media screen and (max-width: 768px) {
     padding: 4rem 2rem;

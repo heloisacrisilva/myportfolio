@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  background-color: ${({ theme }) => theme.primaryBackground};
+  background-color: ${({ theme }) => theme.neutral8};
   border-radius: 1.5rem;
   padding: 4rem;
   display: flex;

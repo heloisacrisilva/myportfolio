@@ -4,10 +4,7 @@ export const CardContainer = styled.div`
   background-color: ${({ theme }) => theme.primaryBackground};
   border: 1px solid ${({ theme }) => theme.dayBorder};
   border-radius: 0.75rem;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 1.5rem 1rem;
   gap: 1.25rem;
   position: relative;
   text-decoration: none;
@@ -35,16 +32,8 @@ export const IconWrapper = styled.div`
   min-width: 2.5rem;
   min-height: 2.5rem;
   border-radius: 50%;
-  background-color: ${({ theme }) => (theme.isDark ? '#2D2D30' : '#F1F0F5')};
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: ${({ theme }) => theme.secondaryColor};
   transition: background-color 0.2s ease;
-
-  ${CardContainer}:hover & {
-    background-color: ${({ theme }) => (theme.isDark ? '#3D3D42' : '#E2E1E9')};
-  }
 
   svg {
     width: 1.5rem;
